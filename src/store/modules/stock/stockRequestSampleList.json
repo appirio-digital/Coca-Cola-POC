@@ -1,0 +1,87 @@
+[
+  {
+    "id": 0,
+    "stockRequestId": "SR-01673",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Approved"
+  },
+  {
+    "id": 1,
+    "stockRequestId": "SR-01677",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Draft"
+  },
+  {
+    "id": 2,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  }
+  ,
+  {
+    "id": 3,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 4,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 5,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 6,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 7,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 8,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 9,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 10,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  },
+  {
+    "id": 11,
+    "stockRequestId": "SR-01678",
+    "submittedDate": "12/31/2017",
+    "approvedDate": "12/31/2017",
+    "status": "Submitted"
+  }
+]

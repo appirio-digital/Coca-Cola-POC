@@ -1,0 +1,134 @@
+[
+  {
+    "report_id": "M21-0B",
+    "type": "cash_return",
+    "name": "Cash Return 1",
+    "amount": 1300
+  },
+  {
+    "report_id": "M1-0B",
+    "type": "cash_collection",
+    "name": "Cash Collection 1",
+    "amount": 2000
+  },
+  {
+    "report_id": "M2-0B",
+    "type": "cash_collection",
+    "name": "Cash Collection 2",
+    "amount": 3000
+  },
+  {
+    "report_id": "M3-0B",
+    "type": "cash_collection",
+    "name": "Cash Collection 3",
+    "amount": 2500
+  },
+  {
+    "report_id": "M4-0B",
+    "type": "cash_collection",
+    "name": "Cash Collection 4",
+    "amount": 900
+  },
+  {
+    "report_id": "M22-0B",
+    "type": "cash_return",
+    "name": "Cash Return 2",
+    "amount": 3400
+  },
+  {
+    "report_id": "M5-0B",
+    "type": "cash_collection",
+    "name": "Cash Collection 5",
+    "amount": 6400
+  },
+  {
+    "report_id": "M6-0B",
+    "type": "cheque_collection",
+    "name": "Cheque Collection 1",
+    "amount": 1240
+  },
+  {
+    "report_id": "M7-0B",
+    "type": "cheque_collection",
+    "name": "Cheque Collection 2",
+    "amount": 1300
+  },
+  {
+    "report_id": "M8-0B",
+    "type": "cheque_collection",
+    "name": "Cheque Collection 3",
+    "amount": 2700
+  },
+  {
+    "report_id": "M9-0B",
+    "type": "cheque_collection",
+    "name": "Cheque Collection 4",
+    "amount": 3450
+  },
+  {
+    "report_id": "M10-0B",
+    "type": "cheque_collection",
+    "name": "Cheque Collection 5",
+    "amount": 5000
+  },
+  {
+    "report_id": "M11-0B",
+    "type": "bank_transfer",
+    "name": "Mobile Parts 1",
+    "amount": 5000
+  },
+  {
+    "report_id": "M12-0B",
+    "type": "bank_transfer",
+    "name": "Mobile Parts 2",
+    "amount": 2450
+  },
+  {
+    "report_id": "M13-0B",
+    "type": "bank_transfer",
+    "name": "Mobile Parts 3",
+    "amount": 6000
+  },
+  {
+    "report_id": "M14-0B",
+    "type": "bank_transfer",
+    "name": "Mobile Parts4",
+    "amount": 2900
+  },
+  {
+    "report_id": "M15-0B",
+    "type": "bank_transfer",
+    "name": "Mobile Parts 5",
+    "amount": 3000
+  },
+  {
+    "report_id": "M16-0B",
+    "type": "cash_sales",
+    "name": "iPad Pro - Ratina - 14 Inch",
+    "amount": 3000
+  },
+  {
+    "report_id": "M17-0B",
+    "type": "cash_sales",
+    "name": "iPhone X - 256 GB",
+    "amount": 2500
+  },
+  {
+    "report_id": "M18-0B",
+    "type": "cash_sales",
+    "name": "One Plus 6 - 64 GB",
+    "amount": 700
+  },
+  {
+    "report_id": "M19-0B",
+    "type": "cash_sales",
+    "name": "One Plus 6 - 256 GB",
+    "amount": 1200
+  },
+  {
+    "report_id": "M20-0B",
+    "type": "cash_sales",
+    "name": "Macbook Pro - 15 Inch",
+    "amount": 1100
+  }
+]

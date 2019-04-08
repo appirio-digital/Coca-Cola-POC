@@ -1,0 +1,153 @@
+{
+  "Customer": {
+    "API": "Customer",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_CUSTOMER_API"
+  },
+  "BusinessRules": {
+    "API": "configurationrules",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "Business_RuleAPI"
+  },
+  "Activities": {
+    "API": "activity",
+    "dependency": "",
+    "isMaster": false,
+    "ROOT_NAME": "JTI_API"
+  },
+  "SalesCatalogs": {
+    "API": "setupSalesCatalogs",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "ProductGroup": {
+    "API": "ProductGroupProductSetup",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "Products": {
+    "API": "products",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "ProductTemplate": {
+    "API": "ORACO__ShoppingCartTmpl_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "priceBookHeaders": {
+    "API": "priceBookHeaders",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "PriceBookItem": {
+    "API": "child/PriceBookItem",
+    "dependency": "priceBookHeaders",
+    "dependencyOn": "PricebookId",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "StockInventory": {
+    "API": "ORACO__RouteInventory_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "RouteAllocation": {
+    "API": "ORACO__RouteAllocation_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "InvoiceHeader": {
+    "API": "ORACO__InvoiceDSD_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "InvoiceLineItem": {
+    "API": "ORACO__InvoiceLineDSD_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "CustomerOrder": {
+    "API": "CustomOrder_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "CustomerOrderInline": {
+    "API": "CustomOrderLine_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "Route": {
+    "API": "ORACO__Route_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "RouteCheckInHistory": {
+    "API": "ORACO__RouteCheckInHist_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "RouteTransaction": {
+    "API": "RouteInvTransDSD_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "PartyResource": {
+    "API": "PartyResource",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "PaymentLine": {
+    "API": "ORACO__PaymentLineDSD_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "Payment": {
+    "API": "ORACO__PaymentDSD_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALESPOC"
+  },
+  "RouteInventoryTransaction": {
+    "API": "RouteInvTransDSD_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES"
+  },
+  "Promotion": {
+    "API": "ORACO__Promotion_c",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_SALES_MCS"
+  },
+  "WorkFlowRules": {
+    "API": "workflowrules",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "WorkflowRule"
+  },
+  "Template": {
+    "API": "check",
+    "dependency": "",
+    "isMaster": true,
+    "ROOT_NAME": "JTI_Templates"
+  }
+}

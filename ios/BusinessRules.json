@@ -1,0 +1,63 @@
+[
+  {
+    "businessrule": "checkCustomerShopSize",
+    "methodname": "checkCustomerShopSize",
+    "description": "Check customer for shopSize",
+    "trigger": "onCreate",
+    "when": "before",
+    "object": "Customer",
+    "argumentcount": 1,
+    "arguments": ["shopsize"],
+    "attachment": "function(dbLayer, jsonAccountPayload){ var { shopsize } = jsonAccountPayload; if(parseInt(shopsize) <= 200){return Promise.resolve('false');}else{return Promise.resolve('true');}}",
+    "output": {
+      "success": "true",
+      "error": {
+        "message": "Shop size needs to be greater than 200",
+        "code": "10"
+      },
+      "retry": "false",
+      "continueonerror": "false"
+    }
+  },
+  {
+    "businessrule": "checkCustomerRegistrationType",
+    "methodname": "checkCustomerRegistrationType",
+    "description": "Check customer for RegistrationType",
+    "trigger": "onCreate",
+    "when": "before",
+    "object": "Customer",
+    "argumentcount": 1,
+    "arguments": ["registrationtype"],
+    "attachment": "function(dbLayer, jsonAccountPayload){ var { registrationtype } = jsonAccountPayload; if(registrationtype === 'Tobacconist'){return Promise.resolve('true');}else{return Promise.resolve('false');}}",
+    "output": {
+      "success": "true",
+      "error": {
+        "message": "RegistrationType cannot be other than Tobaconist",
+        "code": "10"
+      },
+      "retry": "false",
+      "continueonerror": "true"
+    }
+  },
+  {
+    "businessrule": "createActivity",
+    "methodname": "createActivity",
+    "description": "Notify new account creation",
+    "trigger": "onCreate",
+    "when": "after",
+    "object": "Customer",
+    "argumentcount": 1,
+    "arguments": ["PartyNumber"],
+    "attachment": "function(dbLayer, jsonAccountPayload){  var { PartyNumber } = jsonAccountPayload;  var d = new Date(),    month = '' + (d.getMonth() + 1),    day = '' + d.getDate(),    year = d.getFullYear();  if (month.length < 2) month = '0' + month;  if (day.length < 2) day = '0' + day;  var DueDate = [year, month, day].join('-');  return new Promise(function(resolve, reject) {    if (!PartyNumber || !DueDate) {return reject('Invalid Param.');    }    return dbLayer.findAll('Accounts').then(function(results) {  var filteredAccounts = results.filter(function(account) {    return account.PartyNumber === PartyNumber;  });  if (!filteredAccounts || filteredAccounts.length == 0) {    return Promise.reject('Account not found.');  }  var account = filteredAccounts[0];  var { OrganizationDEO_JTI_ShopSize_c, PartyId } = account;  if (parseInt(OrganizationDEO_JTI_ShopSize_c) <= 100) {    return Promise.resolve('true');  }  var activityPayload = {    ActivityFunctionCode: 'TASK',    Subject: 'Review New Account',    DueDate: DueDate,    AccountId: PartyId,    StatusCode: 'NOT_STARTED',    ActivityTypeCode: 'MEETING',    __ORACO__VisitStatusFCL_c: 'ORA_ACO_VISIT_STATUS_NSTARTED',    __ORACO__VisitStatus_c: 'Not Started',    __ORACO__AppointmentName_c: 'Review New Account',    __ORACO__StoreVisit_c: 'true'  };  return dbLayer.insert('activities', activityPayload);}).then(function(res) {  return resolve('true');}).catch(function(err) {  return reject(err.message);});  });}",
+    "output": {
+      "success": "true",
+      "error": {
+        "message": "New Account created but New Activity could not be created",
+        "code": "10"
+      },
+      "retry": "false",
+      "continueonerror": "true"
+    }
+  }
+
+]

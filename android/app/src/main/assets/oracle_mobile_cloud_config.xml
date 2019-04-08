@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mobileBackends>
+
+    <!--Here are the settings for a single mobileBackend.
+    For those apps with multiple mobileBackends, you might need to add
+    settings one by one below-->
+
+    <mobileBackend>
+        <!--Add the name and version of your mobileBackend as values here-->
+        <mbeName>JTI_SALES_MB</mbeName>
+        <mbeVersion>1.0</mbeVersion>
+
+        <!--Set to true if the current mobileBackend is the default one-->
+        <default>true</default>
+
+        <!--Set it true if you want to get analytics information from UI-->
+        <enableAnalytics>false</enableAnalytics>
+
+        <!--Set it true if you want to get location information along with analytics from UI-->
+        <enableAnalyticsLocation>false</enableAnalyticsLocation>
+
+        <!--Set it true if you want to enable Offline Analytics-->
+        <enableOfflineAnalytics>false</enableOfflineAnalytics>
+
+        <!--Set it true if you want to get logging information from UI-->
+        <enableLogger>true</enableLogger>
+
+        <!--Use the app's Environment Settings page to specify the base URL and authorization values-->
+        <!--The app uses the values from this file only if no fields on the Environment Settings page have values-->
+
+        <!--The base URL goes here-->
+        <baseUrl>https://jtiodcmcs-ehjz.mobileenv.us2.oraclecloud.com:443</baseUrl>
+
+        <!--Add authorization settings here -->
+        <!--To get the oAuthTokenEndPoint,oAuthClientId and oAuthClientSecret,
+         go to MCS UI > MobileBackend > Settings -->
+        <authorization>
+            <offlineAuthenticationEnabled>true</offlineAuthenticationEnabled>
+            <authenticationType>basic</authenticationType>
+            <basic>
+                <mobileBackendID>d4c38e2a-b912-4202-bc34-c2289b5b1a22</mobileBackendID>
+                <anonymousKey>RUhKWl9KVElPRENNQ1NfTU9CSUxFX0FOT05ZTU9VU19BUFBJRDpsel82aXl0Y241Z2pTZg==</anonymousKey>
+            </basic>
+        </authorization>
+
+        <!--If you modify the app to use notifications, add the appID here-->
+        <appKey>f0511985-d1ad-4307-92f6-3b81e882be9f</appKey>
+        <mobileBackendID>d4c38e2a-b912-4202-bc34-c2289b5b1a22</mobileBackendID>
+
+        <!-- Configs for Sync-->
+        <synchronization>
+            <!-- max store size in MB -->
+            <maxStoreSize>200</maxStoreSize>
+            <periodicRefreshPolicy>PERIODICALLY_REFRESH_EXPIRED_ITEMS</periodicRefreshPolicy>
+            <periodicRefreshInterval>300</periodicRefreshInterval>
+
+            <defaultPolicy>
+                <fetchPolicy>FETCH_FROM_CACHE</fetchPolicy>
+                <updatePolicy>QUEUE_IF_OFFLINE</updatePolicy>
+                <evictionPolicy>MANUAL_EVICTION</evictionPolicy>
+                <expirationPolicy>NEVER_EXPIRE</expirationPolicy>
+                <expireAfter>150</expireAfter>
+                <conflictResolutionPolicy>CLIENT_WINS</conflictResolutionPolicy>
+            </defaultPolicy>
+
+        </synchronization>
+
+    </mobileBackend>
+
+</mobileBackends>

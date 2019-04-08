@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "id": "300000015248261",
+      "function": "TASK",
+      "subtype": "STOCK_REQUEST",
+      "subject": "Stock Request for 14 Nov 2018",
+      "name": "Stock Request at D-Mart",
+      "description": "",
+      "startdate": "",
+      "enddate": "",
+      "duedate": "2018-12-24",
+      "statuscode": "PENDING",
+      "visitstatus": "NOT_STARTED",
+      "checkinlatitude": "",
+      "checkinlongitude": "",
+      "checkoutlatitude": "",
+      "checkoutlongitude": "",
+      "checkintime": "",
+      "checkouttime": "",
+      "accountid": "300000015717127",
+      "storevisit": "false"
+    },
+    {
+      "id": "300000015248261",
+      "function": "APPOINTMENT",
+      "subtype": "",
+      "subject": "Replace Order",
+      "name": "Stock Request at Walmart",
+      "description": "",
+      "startdate": "2018-12-24T06:00:00+00:00",
+      "enddate": "2018-12-24T07:00:00+00:00",
+      "duedate": "2018-12-24",
+      "statuscode": "PENDING",
+      "visitstatus": "Not Started",
+      "checkinlatitude": "",
+      "checkinlongitude": "",
+      "checkoutlatitude": "",
+      "checkoutlongitude": "",
+      "checkintime": "",
+      "checkouttime": "",
+      "accountid": "300000015717127",
+      "storevisit": "false"
+    }
+  ],
+  "uris": [
+    "/mobile/jti-sales/activity/300000015248261",
+    "/mobile/jti-sales/activity/300000015248262"
+  ],
+  "etags": [
+    "1a8-O/hzZVoii8uqURlfK+GSFzZkR8k",
+    "1a8-O/hzZVoii8uqURlfK+GSFzZkR8J"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "PaymentId": 1,
+      "PaymentNumber": 1010,
+      "PaymentAmount": "$10,000",
+      "PaymentMode": "Cash",
+      "PaymentDate": "08/23/2018",
+      "PaymentInvoice": 1001,
+      "PaymentStatus": "Full"
+    },
+    {
+      "PaymentId": 2,
+      "PaymentNumber": 1010,
+      "PaymentAmount": "$10,000",
+      "PaymentMode": "Cheque",
+      "PaymentDate": "08/23/2018",
+      "PaymentInvoice": 1001,
+      "PaymentStatus": "Partial"
+    },
+    {
+      "PaymentId": 3,
+      "PaymentNumber": 1010,
+      "PaymentAmount": "$10,000",
+      "PaymentMode": "Cash",
+      "PaymentDate": "08/23/2018",
+      "PaymentInvoice": 1001,
+      "PaymentStatus": "Partial"
+    },
+    {
+      "PaymentId": 4,
+      "PaymentNumber": 1010,
+      "PaymentAmount": "$10,000",
+      "PaymentMode": "E-Money",
+      "PaymentDate": "08/23/2018",
+      "PaymentInvoice": 1001,
+      "PaymentStatus": "Full"
+    },
+    {
+      "PaymentId": 5,
+      "PaymentNumber": 1010,
+      "PaymentAmount": "$10,000",
+      "PaymentMode": "Cash",
+      "PaymentDate": "08/23/2018",
+      "PaymentInvoice": 1001,
+      "PaymentStatus": "Full"
+    },
+    {
+      "PaymentId": 6,
+      "PaymentNumber": 1010,
+      "PaymentAmount": "$10,000",
+      "PaymentMode": "Credit Notes",
+      "PaymentDate": "08/23/2018",
+      "PaymentInvoice": 1001,
+      "PaymentStatus": "Partial"
+    }
+  ]
+}

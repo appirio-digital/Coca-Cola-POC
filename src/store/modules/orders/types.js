@@ -1,0 +1,2 @@
+export const GET_ALL_ORDERS = 'GET_ALL_ORDERS';
+export const GET_SELECTED_FILTER = 'GET_SELECTED_FILTER';

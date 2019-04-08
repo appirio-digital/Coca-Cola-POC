@@ -1,0 +1,1 @@
+export const UPDATE_IS_SYNCING = 'UPDATE_IS_SYNCING';

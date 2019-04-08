@@ -1,0 +1,112 @@
+{
+    "items": [
+      {
+        "PromotionId": 1,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 2,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 3,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 4,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 5,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 6,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 7,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 8,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 9,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 10,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 11,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      },
+      {
+        "PromotionId": 12,
+        "PromotionCode": "DSTAA1O",
+        "PromotionName": "P&D (Amt, Value, Period)",
+        "PromotionType": "Promo & Deal",
+        "PromotionBudget": "3000",
+        "PromotionPeriodTo": " 2018-02-01",
+        "PromotionPeriodFrom": " 2018-02-01"
+      }
+    ]
+  }

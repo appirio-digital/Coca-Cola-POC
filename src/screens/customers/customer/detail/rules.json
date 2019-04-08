@@ -1,0 +1,56 @@
+[
+  {
+    "id": "9331",
+    "businessFunction": "setAccountType",
+    "object": "Customer",
+    "fact": ["address.country", "registrationtype"],
+    "trigger": "onCreate",
+    "when": "before",
+    "numberOfRules": 2,
+    "rule": [
+      {
+        "ruleName": "markettype",
+        "priority": 2,
+        "on": true,
+        "condition": "function(R) {!R.when(this.address.country != \"IE\");}",
+        "consequence": "function(R) {console.log(\"Market must be Ireland\");this.result = false; this.reason =\"Market must be Ireland\"; R.stop();}"
+      },
+      {
+        "ruleName": "registrationtype",
+        "priority": 1,
+        "on": true,
+        "condition": "function(R) {!R.when(this.registrationtype != \"Wholesaler\");}",
+        "consequence": "function(R) {console.log(\"RegistrationType must be Wholesaler\");this.result = false;  this.reason =\"RegistrationType must be Wholesaler\"; R.stop();}"
+      }
+    ]
+  },
+  {
+    "id": "9675",
+    "businessFunction": "setShopSize",
+    "object": "Customer",
+    "fact": ["registrationtype", "shopsize"],
+    "trigger": "onCreate",
+    "when": "after",
+    "numberOfRules": 2,
+    "rule": [
+      {
+        "ruleName": "registrationtype",
+        "priority": 2,
+        "on": true,
+        "condition": "function(R) {         R.when(this.registrationtype != \"Wholesaler\"); }",
+        "consequence": "function(R) {               console.log(\"RegistrationType must be Wholesaler\");      this.reason =\"RegistrationType must be Wholesaler\";         this.result = false;               R.stop(); }"
+      },
+      {
+        "name": "shopsize",
+        "priority": 1,
+        "on": true,
+        "condition": "function(R) {         R.when(!(this.shopsize > 100)); }",
+        "consequence": "function(R) {               console.log(\"Shopsize must be greater than 100\");     this.reason =\"Shopsize must be greater than 100\";          this.result = false;               R.stop(); }"
+      }
+    ],
+    "error": {
+      "message": "The shopsize must be greater than 100 for a wholesaler",
+      "code": 100
+    }
+  }
+]

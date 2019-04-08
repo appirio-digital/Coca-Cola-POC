@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "InvoiceId": 1001,
+      "OrderId": 10001,
+      "InvoiceNumber": "INV-1001",
+      "TotalAmount": "$10,000.00",
+      "AmountPaid": "$8000.00",
+      "DueAmount": "$2000.00",
+      "DueDate": "08/17/2018",
+      "CustomerType": "Cash/Credit",
+      "PartyNumber": "1-350V1-128",
+      "OrganizationName": ""
+    },
+    {
+      "InvoiceId": 1002,
+      "OrderId": 10002,
+      "InvoiceNumber": "INV-1002",
+      "TotalAmount": "$10,000.00",
+      "AmountPaid": "$8000.00",
+      "DueAmount": "$2000.00",
+      "DueDate": "08/17/2018",
+      "PartyNumber": "1-350V1-128",
+      "CustomerType": "Cash/Credit"
+    },
+    {
+      "InvoiceId": 1003,
+      "OrderId": 10003,
+      "InvoiceNumber": "INV-1003",
+      "TotalAmount": "$10,000.00",
+      "AmountPaid": "$8000.00",
+      "DueAmount": "$2000.00",
+      "DueDate": "08/17/2018",
+      "PartyNumber": "1-350V1-128",
+      "CustomerType": "Cash/Credit"
+    },
+    {
+      "InvoiceId": 1004,
+      "OrderId": 10004,
+      "InvoiceNumber": "INV-1004",
+      "TotalAmount": "$10,000.00",
+      "AmountPaid": "$8000.00",
+      "DueAmount": "$2000.00",
+      "DueDate": "08/17/2018",
+      "CustomerType": "Cash/Credit",
+      "PartyNumber": "1-350V1-128"
+    },
+    {
+      "InvoiceId": 1005,
+      "OrderId": 10005,
+      "InvoiceNumber": "INV-1005",
+      "TotalAmount": "$10,000.00",
+      "AmountPaid": "$8000.00",
+      "DueAmount": "$2000.00",
+      "DueDate": "08/17/2018",
+      "CustomerType": "Cash/Credit",
+      "PartyNumber": "1-350V1-128"
+    }
+  ]
+}

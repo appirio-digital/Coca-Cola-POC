@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "ProductNumber": "98987654",
+    "Name": "LD Small",
+    "UOM": "EA"
+  },
+  {
+    "id": 1,
+    "ProductNumber": "98987653",
+    "Name": "LD MED",
+    "UOM": "EA"
+  },
+  {
+    "id": 2,
+    "ProductNumber": "98987652",
+    "Name": "LD Large",
+    "UOM": "EA"
+  },
+  {
+    "id": 3,
+    "ProductNumber": "98987651",
+    "Name": "Benson & Hedges",
+    "UOM": "EA"
+  },
+  {
+    "id": 4,
+    "ProductNumber": "98987666",
+    "Name": "Camel",
+    "UOM": "EA"
+  },
+  {
+    "id": 5,
+    "ProductNumber": "98986666",
+    "Name": "Camel Med",
+    "UOM": "EA"
+  },
+  {
+    "id": 6,
+    "ProductNumber": "98987623",
+    "Name": "Camel Large",
+    "UOM": "EA"
+  }
+]

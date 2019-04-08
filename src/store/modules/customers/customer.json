@@ -1,0 +1,135 @@
+{
+  "items": [
+    {
+      "id": "300000015481168",
+      "routeid": "300000014886596",
+      "name": "GeorgeStreetTobaccoShop",
+      "comment": "Thisisaveryimportantcustomer",
+      "offset": 0,
+      "shopsize": "2000",
+      "externalid": "58b10582-e6a4-4b1f-93bf-f6d385e756734",
+      "pricebookid": "300000002037036",
+      "registrationtype": "Tobacconist",
+      "address": [
+        {
+          "id": 2,
+          "street": "11002 Via Eden",
+          "city": "Boca Raton",
+          "country": "IE",
+          "apartment_unit": "11002",
+          "postalcode": "33433",
+          "state_province": "FL",
+          "primary": "true"
+        },
+        {
+          "id": 1,
+          "street": "11002 Via Eden",
+          "city": "Boca Raton",
+          "country": "IE",
+          "apartment_unit": "11002",
+          "postalcode": "33433",
+          "state_province": "FL",
+          "primary": "false"
+        }
+      ],
+      "contact": [
+        {
+          "id": 1,
+          "firstnanme": "John",
+          "lastname": "Doe",
+          "countrycode": "1",
+          "phone": "5612834567",
+          "alternatephone": "5618834567",
+          "email": "doe@foobar.com",
+          "primary": "true"
+        },
+        {
+          "id": 2,
+          "firstnanme": "John",
+          "lastname": "Doe",
+          "countrycode": "1",
+          "phone": "5612834567",
+          "alternatephone": "5618834567",
+          "email": "doe@foobar.com",
+          "primary": "true"
+        }
+      ],
+      "extension": [
+        {
+          "name": "clusterpriority",
+          "value": "High"
+        },
+        {
+          "name": "acceptanceratio",
+          "value": "200"
+        },
+        {
+          "name": "shopSize",
+          "value": "2000"
+        }
+      ]
+    },
+    {
+      "id": "300000015481169",
+      "routeid": "300000014886596",
+      "name": "GeorgeStreetTobaccoShop",
+      "comment": "Thisisaveryimportantcustomer",
+      "offset": 0,
+      "shopsize": "2000",
+      "externalid": "58b10582-e6a4-4b1f-93bf-f6d385e756734",
+      "pricebookid": "300000002037036",
+      "registrationtype": "Tobacconist",
+      "address": [
+        {
+          "id": 2,
+          "street": "11002 Via Eden",
+          "city": "Boca Raton",
+          "country": "IE",
+          "apartment_unit": "11002",
+          "postalcode": "33433",
+          "state_province": "FL",
+          "primary": "true"
+        },
+        {
+          "id": 1,
+          "street": "11002 Via Eden",
+          "city": "Boca Raton",
+          "country": "IE",
+          "apartment_unit": "11002",
+          "postalcode": "33433",
+          "state_province": "FL",
+          "primary": "false"
+        }
+      ],
+      "contact": [
+        {
+          "id": 1,
+          "firstnanme": "John",
+          "lastname": "Doe",
+          "countrycode": "1",
+          "phone": "5612834567",
+          "alternatephone": "5618834567",
+          "email": "doe@foobar.com",
+          "primary": "true"
+        },
+        {
+          "id": 2,
+          "firstnanme": "John",
+          "lastname": "Doe",
+          "countrycode": "1",
+          "phone": "5612834567",
+          "alternatephone": "5618834567",
+          "email": "doe@foobar.com",
+          "primary": "true"
+        }
+      ],
+      "extension": [
+        { "name": "clusterpriority", "value": "High" },
+        { "name": "acceptanceratio", "value": "200" },
+        { "name": "shopSize", "value": "2000" }
+      ]
+    }
+  ],
+  "uris": ["/mobile/jti-sales/customer/100000000410411"],
+  "etags": ["1a8-O/hzZVoii8uqURlfK+GSFzZkR8k"]
+}

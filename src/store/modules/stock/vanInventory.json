@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "productId": "090932828",
+    "productName": "Winston Red",
+    "category": "CS",
+    "systemQuantity": 90,
+    "quantity":40,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 2,
+    "productId": "045832828",
+    "productName": "Red Tin",
+    "category": "CS",
+    "systemQuantity": 90,
+    "quantity":90,
+    "stocktype":"Good"
+  },
+  {
+    "id": 3,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":15,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 4,
+    "productId": "016732828",
+    "productName": "Winston Red Tin",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":50,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 5,
+    "productId": "016732828",
+    "productName": "Winston Red Tin",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":40,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 6,
+    "productId": "016732828",
+    "productName": "Winston Red Tin",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":40,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 7,
+    "productId": "016732828",
+    "productName": "Winston Red Tin",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":40,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 8,
+    "productId": "016732828",
+    "productName": "Winston Red Tin",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":35,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 9,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":50,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 10,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":50,
+    "stocktype":"Bad"
+  },
+  {
+    "id": 11,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 50,
+    "quantity":50,
+    "stocktype":"Good"
+  },
+  {
+    "id": 12,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 30,
+    "quantity":30,
+    "stocktype":"Good"
+  },
+  {
+    "id": 13,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 60,
+    "quantity":60,
+    "stocktype":"Good"
+  },
+  {
+    "id": 14,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 100,
+    "quantity":100,
+    "stocktype":"Good"
+  },
+  {
+    "id": 15,
+    "productId": "161377828",
+    "productName": "Winston",
+    "category": "CS",
+    "systemQuantity": 100,
+    "quantity":100,
+    "stocktype":"Good"
+  },
+  {
+    "id": 16,
+    "productId": "161377828",
+    "productName": "Winston Tin Red",
+    "category": "CS",
+    "systemQuantity": 80,
+    "quantity":80,
+    "stocktype":"Good"
+  },
+  {
+    "id": 17,
+    "productId": "161377828",
+    "productName": "Winston Tin Red",
+    "category": "CS",
+    "systemQuantity": 100,
+    "quantity":100,
+    "stocktype":"Good"
+  },
+  {
+    "id": 18,
+    "productId": "161377828",
+    "productName": "Winston Tin Red",
+    "category": "CS",
+    "systemQuantity": 120,
+    "quantity":120,
+    "stocktype":"Good"
+  },
+  {
+    "id": 19,
+    "productId": "161377828",
+    "productName": "Winston Tin Red",
+    "category": "CS",
+    "systemQuantity": 60,
+    "quantity":60,
+    "stocktype":"Good"
+  },
+  {
+    "id": 20,
+    "productId": "161377828",
+    "productName": "Winston Tin Red",
+    "category": "CS",
+    "systemQuantity": 60,
+    "quantity":59,
+    "stocktype":"Bad"
+  }
+]
