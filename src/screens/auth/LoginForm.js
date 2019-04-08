@@ -172,12 +172,7 @@ class LoginForm extends Component {
       <View style={mainContainerStyleFlex1}>
         <Loader loading={this.props.auth.loading} />
         <View style={mainContainerStyleFlex3} />
-        <View style={logoContainerStyle}>
-          <Image
-            source={require('../../../assets/images/jtiLogossss.png')}
-            style={topLogoStyle}
-          />
-        </View>
+        <View style={logoContainerStyle} />
         <View style={loginContainer}>
           <View style={mainContainerStyleFlex1} />
           <View style={mainContainerStyleFlex2}>
@@ -217,7 +212,7 @@ class LoginForm extends Component {
         </View>
         <View style={logoContainerStyle}>
           <Image
-            source={require('../../../assets/images/jti_logo_dark.png')}
+            source={require('../../../assets/images/cocacola_logo.png')}
             style={logoStyle}
           />
         </View>
@@ -236,7 +231,7 @@ const styles = {
     justifyContent: 'flex-end',
     marginBottom: 40
   },
-  logoStyle: { height: 61, width: 80 },
+  logoStyle: { height: 61, width: 181 },
   topLogoStyle: { height: 100, width: 100 },
   loginContainer: {
     flexDirection: 'row',
