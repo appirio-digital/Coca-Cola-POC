@@ -13,7 +13,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "J_001",
     "Description": "Apple Juice",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -29,7 +30,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "D_001",
     "Description": "Coca Cola",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -45,7 +47,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "J_002",
     "Description": "Cranberry Juice",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -61,7 +64,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "J_003",
     "Description": "Appy Fizz",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -77,7 +81,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "D__02",
     "Description": "Coca Cola zero",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -93,7 +98,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "J_004",
     "Description": "Minute Maid Pulpy Orange",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -109,7 +115,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "D_003",
     "Description": "Sprite",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -125,7 +132,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "D_004",
     "Description": "Fanta",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "King",
@@ -141,7 +149,8 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "D_005",
     "Description": "Diet Coke",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   },
   {
     "__ORACO__Size_c": "",
@@ -157,6 +166,7 @@
     "InvOrgId": "300000002056128",
     "ItemNumber": "J_005",
     "Description": "Odwalla",
-    "__ORACO__ContainerClass_c": ""
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": ""
   }
 ]
