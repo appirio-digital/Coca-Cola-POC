@@ -79,8 +79,8 @@ class Route extends Component {
       !isEmpty(statuscode) && statuscode !== ACTIVITY_STATUS_LOV.IN_PROGRESS
         ? true
         : isEmpty(statuscode)
-          ? true
-          : false;
+        ? true
+        : false;
     const trimmedLatitude = `${
       isNaN(Math.round(latitude * 100) / 100)
         ? 0
@@ -520,6 +520,9 @@ class Route extends Component {
         }
       }
     }
+
+    //TODO: validation skipped
+    isStartDayDisable = false;
     return (
       <View
         style={{
@@ -546,8 +549,8 @@ class Route extends Component {
                 backgroundColor: routeEnd
                   ? APP_THEME.APP_LIST_BORDER_COLOR
                   : inRoute
-                    ? APP_THEME.APP_FONT_COLOR_ORANGE
-                    : APP_THEME.APP_BASE_COLOR
+                  ? APP_THEME.APP_FONT_COLOR_ORANGE
+                  : APP_THEME.APP_BASE_COLOR
               }
             ]}
             disabled={isStartDayDisable ? true : false}
@@ -557,8 +560,8 @@ class Route extends Component {
               {routeEnd
                 ? labels.ROUTE_COMPLETE
                 : inRoute
-                  ? labels.END_DAY
-                  : labels.START_DAY}
+                ? labels.END_DAY
+                : labels.START_DAY}
             </Text>
           </TouchableOpacity>
         </View>
