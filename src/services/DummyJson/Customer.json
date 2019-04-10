@@ -28,7 +28,7 @@
     "comment": "Appirio Demo Customer sample",
     "shopsize": "800",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"4994\",\"street\":\"MacLaren Street\",\"city\":\"Burnaby\",\"state\":\"British Columbia\",\"postalcode\":\"V5A 2Z6\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"4365\",\"street\":\"Dufferin Streett\",\"city\":\"Toronto\",\"state\":\"Ontario\",\"postalcode\":\"M6H 4B6\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Edna\",\"lastname\":\"Lousey\",\"countrycode\":\"\",\"phone\":\"778-886-1036\",\"alternatephone\":\"\",\"email\":\"Edna@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
