@@ -8,6 +8,7 @@ import {
   executeBusinessRulesAndPerformCRUDOperation
 } from '../screens/customers/customer/detail/Observer';
 import Buffer from 'buffer';
+import CustomerSampleJSON from './DummyJson/Customer.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -104,7 +105,14 @@ export const authenticateMCS = (email, password) =>
 export const logoutMCSUser = () => NativeModules.SyncManager.logoutMCS();
 
 export const fetchObjectCollection = async (apiName, endPoint) => {
-  return NativeModules.SyncManager.fetchObjects(apiName, endPoint);
+  let sampleJSON = null;
+  switch (endPoint) {
+    case 'Customer':
+      sampleJSON = CustomerSampleJSON;
+      break;
+  }
+  return Promise.resolve(sampleJSON);
+  //return NativeModules.SyncManager.fetchObjects(apiName, endPoint);
 };
 
 /**
