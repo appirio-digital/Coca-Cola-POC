@@ -80,7 +80,8 @@ export default class IpadLandscap extends Component {
       __ORACO__Brand_c,
       Name,
       EligibleToSellFlag,
-      DefaultUOM
+      DefaultUOM,
+      ProductImage
     } = product;
 
     let imageSource = require('../../../images/cocacola_logo.png');
