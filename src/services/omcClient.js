@@ -12,6 +12,7 @@ import CustomerSampleJSON from './DummyJson/Customer.json';
 import ProductGroupProductSetup from './DummyJson/ProductGroupProductSetup.json';
 import setupSalesCatalogs from './DummyJson/setupSalesCatalogs.json';
 import Products from './DummyJson/Products.json';
+import Activity from './DummyJson/Activity.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -121,6 +122,9 @@ export const fetchObjectCollection = async (apiName, endPoint) => {
       break;
     case 'products':
       sampleJSON = Products;
+      break;
+    case 'activity':
+      sampleJSON = Activity;
       break;
   }
   return Promise.resolve(sampleJSON);

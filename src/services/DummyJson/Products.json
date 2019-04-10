@@ -6,23 +6,6 @@
     "__ORACO__Category_c": "POC Sales",
     "__ORACO__Brand_c": "",
     "__ORACO__IneligibleForShip_c": "false",
-    "InventoryItemId": "100000000756384",
-    "Name": "Apple Juice",
-    "EligibleToSellFlag": "true",
-    "DefaultUOM": "EA",
-    "InvOrgId": "300000002056128",
-    "ItemNumber": "J_001",
-    "Description": "Apple Juice",
-    "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
-  },
-  {
-    "__ORACO__Size_c": "",
-    "__ORACO__EligibleForShipment_c": "true",
-    "__ORACO__ContainerClass_Id_c": "",
-    "__ORACO__Category_c": "POC Sales",
-    "__ORACO__Brand_c": "",
-    "__ORACO__IneligibleForShip_c": "false",
     "InventoryItemId": "100000000756198",
     "Name": "Coca Cola",
     "EligibleToSellFlag": "true",
@@ -31,25 +14,9 @@
     "ItemNumber": "D_001",
     "Description": "Coca Cola",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/coca-cola/coca-cola-original-12-oz-can.jpg"
   },
-  {
-    "__ORACO__Size_c": "",
-    "__ORACO__EligibleForShipment_c": "true",
-    "__ORACO__ContainerClass_Id_c": "",
-    "__ORACO__Category_c": "POC Sales",
-    "__ORACO__Brand_c": "",
-    "__ORACO__IneligibleForShip_c": "false",
-    "InventoryItemId": "100000000756105",
-    "Name": "Cranberry Juice",
-    "EligibleToSellFlag": "true",
-    "DefaultUOM": "EA",
-    "InvOrgId": "300000002056128",
-    "ItemNumber": "J_002",
-    "Description": "Cranberry Juice",
-    "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
-  },
+
   {
     "__ORACO__Size_c": "",
     "__ORACO__EligibleForShipment_c": "true",
@@ -58,14 +25,14 @@
     "__ORACO__Brand_c": "",
     "__ORACO__IneligibleForShip_c": "false",
     "InventoryItemId": "100000000756136",
-    "Name": "Appy Fizz",
+    "Name": "Simply Oranges",
     "EligibleToSellFlag": "true",
     "DefaultUOM": "EA",
     "InvOrgId": "300000002056128",
     "ItemNumber": "J_003",
     "Description": "Appy Fizz",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/logos/simply-orange-pulp-free-52-oz.jpg"
   },
   {
     "__ORACO__Size_c": "",
@@ -82,7 +49,7 @@
     "ItemNumber": "D__02",
     "Description": "Coca Cola zero",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/coca-cola-zero-sugar/coca-cola-zero-sugar-original-12-oz-can.jpg"
   },
   {
     "__ORACO__Size_c": "",
@@ -99,7 +66,7 @@
     "ItemNumber": "J_004",
     "Description": "Minute Maid Pulpy Orange",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/minute-maid-jtg-orange-juice-12-oz.jpg"
   },
   {
     "__ORACO__Size_c": "",
@@ -116,7 +83,7 @@
     "ItemNumber": "D_003",
     "Description": "Sprite",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/sprite-12oz.jpg"
   },
   {
     "__ORACO__Size_c": "",
@@ -133,7 +100,7 @@
     "ItemNumber": "D_004",
     "Description": "Fanta",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/fanta/fanta-orange-12-oz-can.jpg"
   },
   {
     "__ORACO__Size_c": "King",
@@ -150,7 +117,7 @@
     "ItemNumber": "D_005",
     "Description": "Diet Coke",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/diet-coke/diet-coke-original-12-oz-can.jpg"
   },
   {
     "__ORACO__Size_c": "",
@@ -167,6 +134,40 @@
     "ItemNumber": "J_005",
     "Description": "Odwalla",
     "__ORACO__ContainerClass_c": "",
-    "ProductImage": ""
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/odwalla/odwalla-smoothie-mo-beta-15-2-oz-bottle.jpg"
+  },
+  {
+    "__ORACO__Size_c": "",
+    "__ORACO__EligibleForShipment_c": "true",
+    "__ORACO__ContainerClass_Id_c": "",
+    "__ORACO__Category_c": "POC Sales",
+    "__ORACO__Brand_c": "",
+    "__ORACO__IneligibleForShip_c": "false",
+    "InventoryItemId": "100000000756105",
+    "Name": "Cranberry Juice",
+    "EligibleToSellFlag": "true",
+    "DefaultUOM": "EA",
+    "InvOrgId": "300000002056128",
+    "ItemNumber": "J_002",
+    "Description": "Cranberry Juice",
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/simply-cranberry-52-oz.jpg"
+  },
+  {
+    "__ORACO__Size_c": "",
+    "__ORACO__EligibleForShipment_c": "true",
+    "__ORACO__ContainerClass_Id_c": "",
+    "__ORACO__Category_c": "POC Sales",
+    "__ORACO__Brand_c": "",
+    "__ORACO__IneligibleForShip_c": "false",
+    "InventoryItemId": "100000000756384",
+    "Name": "Apple Juice",
+    "EligibleToSellFlag": "true",
+    "DefaultUOM": "EA",
+    "InvOrgId": "300000002056128",
+    "ItemNumber": "J_001",
+    "Description": "Apple Juice",
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/minute-maid-apple-juice-100-6-oz.jpg"
   }
 ]

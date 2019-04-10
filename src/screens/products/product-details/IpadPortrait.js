@@ -80,17 +80,16 @@ export default class IpadPortrait extends Component {
       __ORACO__Brand_c,
       Name,
       EligibleToSellFlag,
-      DefaultUOM
+      DefaultUOM,
+      ProductImage
     } = product;
 
-    let imageSource = require('../../../images/cocacola_logo.png');
-    if (this.state.filePath !== '') {
-      imageSource = {
-        uri: this.state.filePath,
-        scale: 1
-      };
-    }
-
+    let imageSource = ProductImage
+      ? {
+          uri: ProductImage,
+          scale: 1
+        }
+      : require('../../../images/cocacola_logo.png');
     // if (ItemNumber === 'LD SS Amber SKU')
     //   imageSource = require('../../../images/amber-leaf-30g-pouch.png');
 
@@ -179,7 +178,7 @@ export default class IpadPortrait extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: APP_THEME.APP_BACKGROUND_COLOR,
+    backgroundColor: APP_THEME.APP_BASE_COLOR_WHITE,
     padding: 20,
     alignItems: 'center'
   },

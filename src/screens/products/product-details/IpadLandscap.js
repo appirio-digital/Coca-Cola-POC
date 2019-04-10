@@ -84,31 +84,13 @@ export default class IpadLandscap extends Component {
       ProductImage
     } = product;
 
-    let imageSource = require('../../../images/cocacola_logo.png');
-    if (this.state.filePath !== '') {
-      imageSource = {
-        uri: this.state.filePath,
-        scale: 1
-      };
-    }
+    let imageSource = ProductImage
+      ? {
+          uri: ProductImage,
+          scale: 1
+        }
+      : require('../../../images/cocacola_logo.png');
 
-    // if (ItemNumber === 'LD SS Amber SKU')
-    //   imageSource = require('../../../images/amber-leaf-30g-pouch.png');
-
-    // if (ItemNumber === '13598314')
-    //   imageSource = require('../../../images/mayfair-green-ks.png');
-
-    // if (ItemNumber === '14011327')
-    //   imageSource = require('../../../images/Mayfair-Original-30s.png');
-
-    // if (ItemNumber === '13751620')
-    //   imageSource = require('../../../images/mayfair-sk-original.png');
-
-    // if (ItemNumber === '13212514')
-    //   imageSource = require('../../../images/silk-cut-purple-23s.jpg');
-
-    // if (ItemNumber === '13613461')
-    //   imageSource = require('../../../images/silk-cut-silver-100s.jpg');
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <CameraModal
@@ -204,7 +186,7 @@ export default class IpadLandscap extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: APP_THEME.APP_BACKGROUND_COLOR,
+    backgroundColor: APP_THEME.APP_BASE_COLOR_WHITE,
     padding: 20,
     flexDirection: 'row'
   },

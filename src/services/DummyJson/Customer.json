@@ -1,56 +1,56 @@
 [
   {
     "id": "1001",
-    "name": "Walper smoke shop",
+    "name": "Walper super market",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer",
     "shopsize": "1200",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1001\",\"additional\":\"1668\",\"street\":\"BurdettAvenue\",\"city\":\"Victoria\",\"state\":\"BritishColumbia\",\"postalcode\":\"V8Z2J8\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"CA\",\"addressid\":\"1001\",\"additional\":\"677\",\"street\":\"Adelaide St\",\"city\":\"Torontoe\",\"state\":\"Ontario\",\"postalcode\":\"M5H 1P6\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1001\",\"firstname\":\"Cena\",\"lastname\":\"John\",\"countrycode\":\"\",\"phone\":\"778-886-1036\",\"alternatephone\":\"\",\"email\":\"cena@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1002",
-    "name": "George Street Tobacco Shop",
+    "name": "George Street Shop",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "1520",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"3584\",\"street\":\"Thurston Dr\",\"city\":\"Ottawa\",\"state\":\"Ontario\",\"postalcode\":\"K1G 0Z2\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"CA\",\"addressid\":\"1002\",\"additional\":\"3584\",\"street\":\"Thurston Dr\",\"city\":\"Ottawa\",\"state\":\"Ontario\",\"postalcode\":\"K1G 0Z2\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"George\",\"lastname\":\"Sam\",\"countrycode\":\"\",\"phone\":\"613-513-1410\",\"alternatephone\":\"\",\"email\":\"george@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1003",
-    "name": "Edna Tobacco Shop",
+    "name": "Edna Super market",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "800",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"4994\",\"street\":\"Lake City Way\",\"city\":\"Burnaby\",\"state\":\"British Columbia\",\"postalcode\":\"V5A 2Z6\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"4994\",\"street\":\"MacLaren Street\",\"city\":\"Burnaby\",\"state\":\"British Columbia\",\"postalcode\":\"V5A 2Z6\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Edna\",\"lastname\":\"Lousey\",\"countrycode\":\"\",\"phone\":\"778-886-1036\",\"alternatephone\":\"\",\"email\":\"Edna@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1004",
-    "name": "Frank A Barker Smoke Shop",
+    "name": "Frank A Barker Shop",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "1100",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"5019\",\"street\":\"Reserve St\",\"city\":\"Omemee\",\"state\":\"Ontario\",\"postalcode\":\"K0L 2S0\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"CA\",\"addressid\":\"1004\",\"additional\":\"5019\",\"street\":\"Reserve St\",\"city\":\"Omemee\",\"state\":\"Ontario\",\"postalcode\":\"K0L 2S0\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Frank\",\"lastname\":\"Barker\",\"countrycode\":\"\",\"phone\":\"705-799-3756\",\"alternatephone\":\"\",\"email\":\"frank.barker@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1005",
-    "name": "Marjorie M Frazier Smoke Shop",
+    "name": "T Blaker Super Mart",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "890",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"361\",\"street\":\"Sixth Street\",\"city\":\"New Westminster\",\"state\":\"British Columbia\",\"postalcode\":\"V3L 3C1\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"CA\",\"addressid\":\"1005\",\"additional\":\"1501 \",\"street\":\"Wyecroft Road\",\"city\":\"Burlington\",\"state\":\"Ontario\",\"postalcode\":\"L7R 3X7\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Marjorie\",\"lastname\":\"Frazier\",\"countrycode\":\"\",\"phone\":\"604-519-3352\",\"alternatephone\":\"\",\"email\":\"Marjorie.Frazier@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   }
