@@ -1,0 +1,18 @@
+[
+  {
+    "StartDate": "1951-01-01T00:00:00+00:00",
+    "EndDate": "4712-12-31T00:00:00+00:00",
+    "UsageRootFlag": "N",
+    "ProdGroupId": "100000001315391",
+    "ProdGroupName": "Soft Drinks",
+    "ProdGroupDescription": "Style:ECIG"
+  },
+  {
+    "StartDate": "1951-01-01T00:00:00+00:00",
+    "EndDate": "4712-12-31T00:00:00+00:00",
+    "UsageRootFlag": "N",
+    "ProdGroupId": "100000001315489",
+    "ProdGroupName": "Juices",
+    "ProdGroupDescription": "Style:ECIG"
+  }
+]

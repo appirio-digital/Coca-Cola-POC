@@ -9,6 +9,9 @@ import {
 } from '../screens/customers/customer/detail/Observer';
 import Buffer from 'buffer';
 import CustomerSampleJSON from './DummyJson/Customer.json';
+import ProductGroupProductSetup from './DummyJson/ProductGroupProductSetup.json';
+import setupSalesCatalogs from './DummyJson/setupSalesCatalogs.json';
+import Products from './DummyJson/Products.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -109,6 +112,15 @@ export const fetchObjectCollection = async (apiName, endPoint) => {
   switch (endPoint) {
     case 'Customer':
       sampleJSON = CustomerSampleJSON;
+      break;
+    case 'ProductGroupProductSetup':
+      sampleJSON = ProductGroupProductSetup;
+      break;
+    case 'setupSalesCatalogs':
+      sampleJSON = setupSalesCatalogs;
+      break;
+    case 'products':
+      sampleJSON = Products;
       break;
   }
   return Promise.resolve(sampleJSON);

@@ -45,7 +45,7 @@ export default class IpadPortrait extends Component {
     const {
       product: { InventoryItemId }
     } = this.props;
-    this.loadProductImage();
+    // this.loadProductImage();
   }
 
   loadProductImage = async () => {
@@ -83,7 +83,7 @@ export default class IpadPortrait extends Component {
       DefaultUOM
     } = product;
 
-    let imageSource = require('../../../images/cigarette-product.jpg');
+    let imageSource = require('../../../images/cocacola_logo.png');
     if (this.state.filePath !== '') {
       imageSource = {
         uri: this.state.filePath,

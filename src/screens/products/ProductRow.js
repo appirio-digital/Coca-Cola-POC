@@ -34,7 +34,7 @@ export default class ProductRow extends PureComponent {
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          style={{ flex: 1, flexDirection: 'row' }}
+          style={{ flex: 0.5, flexDirection: 'row' }}
           onPress={onRowClick(item)}
         >
           <Text style={styles.productIdTextStyle}>{ItemNumber}</Text>

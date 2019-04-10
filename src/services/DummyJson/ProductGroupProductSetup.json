@@ -1,0 +1,123 @@
+[
+  {
+    "ProdGroupItemsId": "300000002038695",
+    "ProdGroupId": "100000001315391",
+    "InventoryItemId": "100000000756523",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "LD Special Blue SKU - ",
+    "LongDescription": "LD Special Blue SKU - ",
+    "ProductNumber": "LD Special Blue SKU"
+  },
+  {
+    "ProdGroupItemsId": "300000002038696",
+    "ProdGroupId": "100000001315489",
+    "InventoryItemId": "100000000756493",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Odwalla",
+    "LongDescription": "Odwalla",
+    "ProductNumber": "J_005"
+  },
+  {
+    "ProdGroupItemsId": "300000002038697",
+    "ProdGroupId": "100000001315391",
+    "InventoryItemId": "100000000756515",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Diet Coke",
+    "LongDescription": "Diet Coke",
+    "ProductNumber": "D_005"
+  },
+  {
+    "ProdGroupItemsId": "300000002038698",
+    "ProdGroupId": "100000001315391",
+    "InventoryItemId": "100000000756514",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Fanta",
+    "LongDescription": "Fanta",
+    "ProductNumber": "D_004"
+  },
+  {
+    "ProdGroupItemsId": "300000015101296",
+    "ProdGroupId": "100000001315391",
+    "InventoryItemId": "100000000756229",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Sprite",
+    "LongDescription": "Sprite",
+    "ProductNumber": "D_003"
+  },
+  {
+    "ProdGroupItemsId": "300000015101297",
+    "ProdGroupId": "100000001315391",
+    "InventoryItemId": "100000000756198",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Coca Cola",
+    "LongDescription": "Coca Cola Regular",
+    "ProductNumber": "D_001"
+  },
+  {
+    "ProdGroupItemsId": "300000015101298",
+    "ProdGroupId": "100000001315391",
+    "InventoryItemId": "100000000756260",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Coca Cola Zero",
+    "LongDescription": "Coca Cola Zero",
+    "ProductNumber": "D_002"
+  },
+  {
+    "ProdGroupItemsId": "300000015101299",
+    "ProdGroupId": "100000001315489",
+    "InventoryItemId": "100000000756136",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Appy Fizz",
+    "LongDescription": "Appy Fizz",
+    "ProductNumber": "J_003"
+  },
+  {
+    "ProdGroupItemsId": "300000015101300",
+    "ProdGroupId": "100000001315489",
+    "InventoryItemId": "100000000756105",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Cranberry Juice",
+    "LongDescription": "Cranberry Juice",
+    "ProductNumber": "J_002"
+  },
+  {
+    "ProdGroupItemsId": "300000015101301",
+    "ProdGroupId": "100000001315489",
+    "InventoryItemId": "100000000756384",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Apple Juice",
+    "LongDescription": "Apple Juice",
+    "ProductNumber": "J_001"
+  },
+  {
+    "ProdGroupItemsId": "300000015102199",
+    "ProdGroupId": "100000001315489",
+    "InventoryItemId": "300000015101222",
+    "InvOrgId": "300000002056128",
+    "DisplayOrderNum": "",
+    "ActiveFlag": "true",
+    "Description": "Minute Maid Pulpy Orange",
+    "LongDescription": "Minute Maid Pulpy Orange",
+    "ProductNumber": "J_004"
+  }
+]
