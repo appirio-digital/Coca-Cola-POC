@@ -1,0 +1,28 @@
+{
+  "id": "dd1338e5-b518-4b01-af16-4d329d493cfe",
+  "username": "Canadian.User",
+  "Currency": "CAD",
+  "email": "deepak.sharma@appirio.com",
+  "firstName": "Canadian",
+  "lastName": "User",
+  "Minimum_Amount": 15,
+  "MobileAppIdentifier": "Canadian.User",
+  "Module1": "[{\"id\":\"0\", \"priority\":\"1\", \"route\": \"route\", \"name\": \"Route Review\",\"enabled\": \"true\"},{\"id\":\"1\", \"priority\":\"2\", \"route\": \"CUSTOMERS\", \"name\": \"Customers\",\"enabled\": \"true\"},{\"id\":\"2\", \"priority\":\"3\", \"route\": \"PRODUCTS\", \"name\": \"Products\",\"enabled\": \"true\"},{\"id\":\"3\", \"priority\":\"4\", \"route\": \"REPORTS\", \"name\": \"Reports\",\"enabled\": \"true\"},{\"id\":\"4\", \"priority\":\"5\", \"route\": \"SUMMARY\", \"name\": \"Summary\",\"enabled\": \"true\"},{\"id\":\"5\", \"priority\":\"6\", \"route\": \"INVENTORY\", \"name\": \"Stock/Inventory\",\"enabled\": \"true\"},{\"id\":\"6\", \"priority\":\"7\", \"route\": \"PERFORMANCE\", \"name\": \"Performance\",\"enabled\": \"true\"},{\"id\":\"7\", \"priority\":\"8\", \"route\": \"SYNC\", \"name\": \"Sync\",\"enabled\": \"true\"},{\"id\":\"8\", \"priority\":\"9\", \"route\": \"SETUP\", \"name\": \"SETUP\",\"enabled\": \"false\"},{\"id\":\"9\", \"priority\":\"10\", \"route\": \"MESSAGING\", \"name\": \"Messaging\",\"enabled\": \"false\"}]",
+  "Module2": null,
+  "PartyNumber": "9862",
+  "PriceBook": "Canada%20Price%20Book",
+  "Prim": "CA",
+  "ResourceProfileId": 300000015407272,
+  "RouteId": 300000015265713,
+  "SR_Quantity": 40,
+  "links": [
+    {
+      "rel": "canonical",
+      "href": "/mobile/platform/platform/users/Canadian.User"
+    },
+    {
+      "rel": "self",
+      "href": "/mobile/platform/platform/users/Canadian.User"
+    }
+  ]
+}

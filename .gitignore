@@ -64,4 +64,3 @@ yarn.lock
 android/settings.gradle
 android/app/build.gradle
 android/app/src/main/java/com/jtisales/MainApplication.java
-ios/JTISales.xcodeproj/project.pbxproj
