@@ -79,19 +79,10 @@ class Customers extends Component {
   }
 
   checkForPendingRecords = async () => {
-    try {
-      const response = await NativeModules.SyncManager.hasLocalRecords();
-      if (response.LocalCounts && response.FailedCounts) {
-        this.setState({ isPendingTransactionWithFailedRecords: true });
-      } else if (response.LocalCounts) {
-        this.setState({ isPendingTransaction: true });
-      } else {
-        this.setState({
-          isPendingTransactionWithFailedRecords: false,
-          isPendingTransaction: false
-        });
-      }
-    } catch (error) {}
+    this.setState({
+      isPendingTransactionWithFailedRecords: false,
+      isPendingTransaction: false
+    });
   };
 
   updateOnlineStatus = async status => {
@@ -142,7 +133,15 @@ class Customers extends Component {
       labels.ERASED_DATABASE_TITLE,
       labels.ERACED_LOCAL_DATABSED_ALERT_MESSAGE,
       [
-        { text: labels.YES, onPress: () => this.onEraseLocalDatabaseClick() },
+        {
+          text: labels.YES,
+          onPress: () => {
+            this.setState({
+              isDataSyncComplete: false,
+              dataSyncStatusMessage: 'Local data erased!'
+            });
+          }
+        },
         {
           text: labels.NO,
           onPress: () => {},
@@ -166,6 +165,39 @@ class Customers extends Component {
   };
 
   onSyncNowClick = () => {
+    if (this.state.isOnline) {
+      if (this.state.isConnected) {
+        Alert.alert(labels.SYNC_NOW_MESSAGE, labels.SYNC_NOW_ALERT_MESSAGE, [
+          {
+            text: labels.FULL_SYNC,
+            onPress: () => this.syncMimic(true)
+          },
+          {
+            text: labels.PARTIAL_SYNC,
+            onPress: () => this.syncMimic(false)
+          },
+          {
+            text: labels.NO,
+            onPress: () => {},
+            style: 'cancel'
+          }
+        ]);
+      } else {
+        this.setState({
+          isDataSyncComplete: false,
+          dataSyncStatusMessage: labels.NO_CONNECTIVITY_ERROR_MESSAGE
+        });
+      }
+    } else {
+      this.setState({
+        isDataSyncComplete: false,
+        dataSyncStatusMessage: labels.SYNC_OFFLINE_MODE_MESSAGE
+      });
+      this.props.syncActions.updateIsDataSyncing(false);
+    }
+  };
+
+  onSyncNowClickOLD = () => {
     if (this.state.isOnline) {
       if (this.state.isConnected) {
         Alert.alert(labels.SYNC_NOW_MESSAGE, labels.SYNC_NOW_ALERT_MESSAGE, [
@@ -196,6 +228,21 @@ class Customers extends Component {
       });
       this.props.syncActions.updateIsDataSyncing(false);
     }
+  };
+
+  syncMimic = async isFullSync => {
+    const {
+      auth: {
+        profile: { __ORACO__DistributionCentre_c }
+      },
+      syncActions: { updateIsDataSyncing }
+    } = this.props;
+
+    this.setState({ dataSyncStatusMessage: '', isLoading: true });
+    updateIsDataSyncing(true);
+    setTimeout(() => {
+      this.updateSuccessState();
+    }, 3000);
   };
 
   syncRecordsFromRemoteServer = async isFullSync => {

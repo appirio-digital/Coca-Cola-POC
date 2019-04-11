@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -50,7 +50,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription - 2</key>
-	<string>To show route on map with user&apos;s current location.</string>
+	<string>To show route on map with user's current location.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Added to capture Products image</string>
 	<key>UIAppFonts</key>

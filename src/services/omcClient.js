@@ -118,7 +118,7 @@ export const authenticateMCS = (email, password) =>
 export const logoutMCSUser = () => NativeModules.SyncManager.logoutMCS();
 
 export const fetchObjectCollection = async (apiName, endPoint) => {
-  let sampleJSON = null;
+  let sampleJSON = [];
   switch (endPoint) {
     case 'Customer':
       sampleJSON = CustomerSampleJSON;
@@ -216,60 +216,7 @@ export const createNewObject = async (
   diffrentiator,
   isPinHigh
 ) => {
-  // var triggerType = TriggerType.onCreate;
-  // //Considering that Id field would be available in all the APIs.
-  // if (json.hasOwnProperty('Id')) {
-  //   triggerType = TriggerType.onUpdate;
-  // }
-  // return applyTriggersToCRUDOperation(
-  //   endPoint,
-  //   triggerType,
-  //   json,
-  //   createNewObjectOnBridge,
-  //   [json, apiName, endPoint, diffrentiator, isPinHigh]
-  // );
-  try {
-    var triggerType = TriggerType.onCreate;
-    //Considering that Id field would be available in all the APIs.
-    if (json.id) {
-      triggerType = TriggerType.onUpdate;
-    }
-    //create a new instance.
-    click = new Click();
-
-    //Subscribe
-    click.subscribe(
-      'businessrules',
-      executeBusinessRulesAndPerformCRUDOperation
-    );
-
-    return new Promise(async (resolve, reject) => {
-      click.fire('businessrules', {
-        object: '' + endPoint,
-        triggerType: triggerType,
-        data: json,
-        crudOperation: async () => {
-          console.log('DATA HERE', json);
-          return await createNewObjectOnBridge(
-            json,
-            apiName,
-            endPoint,
-            diffrentiator,
-            isPinHigh
-          );
-        },
-        onSuccessHandler: response => {
-          resolve(response);
-        },
-        onFailHandler: error => {
-          reject(error);
-        }
-      });
-      click.unsubscribe('businessrules');
-    });
-  } catch (error) {
-    return Promise.reject(error);
-  }
+  return Promise.resolve({ success: true, object: json });
 };
 
 const applyTriggersToCRUDOperation = async (
@@ -482,7 +429,10 @@ export const eraseDatabase = () =>
 
 /** Check if local records pending to sync over server  */
 export const hasLocalDatabaseRecords = () => {
-  NativeModules.SyncManager.hasLocalRecords();
+  return Promise.resolve({
+    LocalCounts: 0,
+    FailedCounts: 0
+  });
 };
 
 export const uploadRecords = () => {
