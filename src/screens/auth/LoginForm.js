@@ -24,7 +24,7 @@ import { labels } from '../../stringConstants';
 
 class LoginForm extends Component {
   state = {
-    email: 'Canadian.User', //'Canadian.User',
+    email: 'Coke.User', //'Canadian.User',
     password: 'Wipro@1234',
     autoLogin: false,
     touchIdAvailable: false
