@@ -507,7 +507,8 @@ export default class VanInventoryList extends Component {
         <PhotoPreview
           imagePath={this.state.filePath}
           visible={this.state.previewImage}
-          uploadAttchment={this.onUploadImage}
+          //uploadAttchment={this.onUploadImage}
+          uploadAttchment={() => {}}
           onPreviewCancel={this.onCancelPrivew}
         />
         <Loader loading={this.state.loading} />

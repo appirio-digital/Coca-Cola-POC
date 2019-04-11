@@ -22,6 +22,7 @@ import InvoiceLineItem from './DummyJson/InvoiceLineItem.json';
 import Route from './DummyJson/Route.json';
 import RouteAllocation from './DummyJson/RouteAllocation.json';
 import RouteInventory from './DummyJson/RouteInventory.json';
+import Template from './DummyJson/check.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -155,6 +156,9 @@ export const fetchObjectCollection = async (apiName, endPoint) => {
       break;
     case 'ORACO__RouteInventory_c':
       sampleJSON = RouteInventory;
+      break;
+    case 'check':
+      sampleJSON = Template;
       break;
   }
 

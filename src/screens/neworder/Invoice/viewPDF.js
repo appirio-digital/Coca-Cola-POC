@@ -104,7 +104,8 @@ export default class ViewPDF extends Component {
       <View style={{ flex: 1 }}>
         <Loader loading={this.state.loading} />
         <View style={styles.containerStyle}>
-          <TouchableOpacity onPress={this.uploadReprt}>
+          {/* <TouchableOpacity onPress={this.uploadReprt}> */}
+          <TouchableOpacity onPress={() => {}}>
             <View style={styles.container2Style}>
               <Text style={styles.textStyle}></Text>
             </View>

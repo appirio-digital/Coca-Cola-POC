@@ -14,7 +14,7 @@
     "__ORACO__LastProcessedTimestamp_c": "",
     "__ORACO__OrganizationID_c": "",
     "CurrencyCode": "CAD",
-    "__ORACO__Product_c": "LD Special Blue SKU - ",
+    "__ORACO__Product_c": "Sprite",
     "__ORACO__TotalQuantity_c": "13"
   },
   {
@@ -32,7 +32,7 @@
     "__ORACO__LastProcessedTimestamp_c": "",
     "__ORACO__OrganizationID_c": "",
     "CurrencyCode": "CAD",
-    "__ORACO__Product_c": "LD Red SKU - ",
+    "__ORACO__Product_c": "Minute Maid Pulpy Orange",
     "__ORACO__TotalQuantity_c": "13"
   },
   {
@@ -50,14 +50,14 @@
     "__ORACO__LastProcessedTimestamp_c": "",
     "__ORACO__OrganizationID_c": "",
     "CurrencyCode": "CAD",
-    "__ORACO__Product_c": "Winston Silver 60 SKU - ",
+    "__ORACO__Product_c": "Diet Coke",
     "__ORACO__TotalQuantity_c": "39"
   },
   {
     "__ORACO__UnsellableQuantity_c": "0",
     "__ORACO__Route_Id_c": "300000015265713",
     "__ORACO__UOMCode_c": "",
-    "RecordName": "LD Red soft SKU",
+    "RecordName": "Coca Cola",
     "__ORACO__SellableQuantity_c": "39",
     "__ORACO__UOM_c": "EA",
     "Id": "300000015448192",
@@ -68,7 +68,7 @@
     "__ORACO__LastProcessedTimestamp_c": "",
     "__ORACO__OrganizationID_c": "",
     "CurrencyCode": "CAD",
-    "__ORACO__Product_c": "LD Red soft SKU",
+    "__ORACO__Product_c": "Coca Cola",
     "__ORACO__TotalQuantity_c": "39"
   }
 ]

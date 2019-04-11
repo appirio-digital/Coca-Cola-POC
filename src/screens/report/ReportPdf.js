@@ -178,7 +178,8 @@ export default class ReportPdf extends Component {
       <View style={{ flex: 1, backgroundColor: '#F8F8F8' }}>
         <Loader loading={this.state.loading} />
         <View style={containerStyle}>
-          <TouchableOpacity onPress={() => this.onGenerateReport()}>
+          {/* <TouchableOpacity onPress={() => this.onGenerateReport()}> */}
+          <TouchableOpacity onPress={() => {}}>
             <View style={container2Style}>
               <Text style={textStyle}></Text>
             </View>
