@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Canada Price Book",
+    "PricebookId": "300000015102561",
+    "PricebookCode": "1a330b31-7941-4b0e-b308-8d5fda072381",
+    "StatusCode": "ACTIVE",
+    "Description": "Canada Price Book",
+    "CurrencyCode": "CAD",
+    "HeaderExternalKey": "300000015102561",
+    "__ORACO__Tax1Code_c": "ORA_ACO_TAX_CODE_VAT",
+    "__ORACO__Tax1Method_c": "ORA_ACO_TAX_METHOD_PERCENT",
+    "__ORACO__Tax2Code_c": "ORA_ACO_TAX_CODE_VAT",
+    "__ORACO__Tax2Method_c": "ORA_ACO_TAX_METHOD_PERCENT"
+  }
+]

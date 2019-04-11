@@ -13,6 +13,12 @@ import ProductGroupProductSetup from './DummyJson/ProductGroupProductSetup.json'
 import setupSalesCatalogs from './DummyJson/setupSalesCatalogs.json';
 import Products from './DummyJson/Products.json';
 import Activity from './DummyJson/Activity.json';
+import Order from './DummyJson/CustomOrder.json';
+import OrderLineItem from './DummyJson/CustomOrderLine.json';
+import PriceBookHeader from './DummyJson/PriceBookHeader.json';
+import PriceBookLine from './DummyJson/PriceBookLine.json';
+import Invoice from './DummyJson/Invoice.json';
+import InvoiceLineItem from './DummyJson/InvoiceLineItem.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -126,6 +132,26 @@ export const fetchObjectCollection = async (apiName, endPoint) => {
     case 'activity':
       sampleJSON = Activity;
       break;
+    case 'CustomOrder_c':
+      sampleJSON = Order;
+      break;
+    case 'CustomOrderLine_c':
+      sampleJSON = OrderLineItem;
+      break;
+    case 'ORACO__InvoiceDSD_c':
+      sampleJSON = Invoice;
+      break;
+    case 'ORACO__InvoiceLineDSD_c':
+      sampleJSON = InvoiceLineItem;
+      break;
+  }
+
+  if (endPoint.includes(API_END_POINT.PRICE_BOOK)) {
+    sampleJSON = PriceBookHeader;
+  }
+
+  if (endPoint.includes(API_END_POINT.PRICE_BOOK_ITEM)) {
+    sampleJSON = PriceBookLine;
   }
   return Promise.resolve(sampleJSON);
   //return NativeModules.SyncManager.fetchObjects(apiName, endPoint);

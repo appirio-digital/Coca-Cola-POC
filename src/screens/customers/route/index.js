@@ -61,6 +61,10 @@ class Route extends Component {
   };
 
   activityItemClickHandler = async activity => {
+    
+
+  alert('Checkin success!')
+
     const {
       id,
       activitynumber,
