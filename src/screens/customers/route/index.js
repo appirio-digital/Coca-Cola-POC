@@ -56,10 +56,15 @@ class Route extends Component {
     checkInId: '',
     isStartingDay: false,
     noVisitInprogress: true,
-    refresh: true
+    refresh: true,
+    inRoute: false
   };
 
   activityItemClickHandler = async activity => {
+    
+
+  alert('Checkin success!')
+
     const {
       id,
       activitynumber,
@@ -386,6 +391,12 @@ class Route extends Component {
     // if (routeEnd) {
     //   return;
     // }
+    const { isStartingDay } = this.state;
+
+    this.setState({ inRoute: !inRoute, isStartingDay: !isStartingDay });
+
+    return;
+
     const {
       routeName,
       routeId,
@@ -474,18 +485,19 @@ class Route extends Component {
       routeHistory,
       activityList,
       isCheckoutForDay,
-      noVisitInprogress
+      noVisitInprogress,
+      inRoute
     } = this.state;
     const routeEnd = routeHistory
       ? routeHistory.__ORACO__CheckOutTime_c
         ? true
         : false
       : false;
-    const inRoute = routeHistory
-      ? routeHistory.__ORACO__CheckOutTime_c
-        ? false
-        : true
-      : false;
+    // const inRoute = routeHistory
+    //   ? routeHistory.__ORACO__CheckOutTime_c
+    //     ? false
+    //     : true
+    //   : false;
     let isStartDayDisable = false;
     if (
       isEmpty(routeHistory) &&

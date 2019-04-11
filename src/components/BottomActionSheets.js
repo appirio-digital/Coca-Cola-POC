@@ -72,14 +72,14 @@ export default class BottomActionSheets extends Component {
                   {labels.GENERATE_ORDER_FROM_PREVIOS_ORDERS}
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 style={styles.topRowContainer}
                 onPress={() => this.openProductTemplateScreen(accountId)}
               >
                 <Text style={styles.topTextStyle}>
                   {labels.SELECT_ITEM_FROM_TEMPLATES}
                 </Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
               <TouchableOpacity
                 style={styles.manuallyContainer}
                 onPress={() => this.openNewOrderScreen(accountId)}

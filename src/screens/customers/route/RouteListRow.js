@@ -47,8 +47,8 @@ const RouteListRow = props => {
                 color: visited
                   ? APP_THEME.APP_LIST_BORDER_COLOR
                   : inVisit
-                    ? APP_THEME.APP_FONT_COLOR_ORANGE
-                    : APP_THEME.APP_BASE_COLOR
+                  ? APP_THEME.APP_FONT_COLOR_ORANGE
+                  : APP_THEME.APP_BASE_COLOR
               }
             ]}
           >
@@ -79,8 +79,8 @@ const RouteListRow = props => {
                 backgroundColor: visited
                   ? APP_THEME.APP_LIST_BORDER_COLOR
                   : inVisit
-                    ? APP_THEME.APP_FONT_COLOR_ORANGE
-                    : APP_THEME.APP_BASE_COLOR
+                  ? APP_THEME.APP_FONT_COLOR_ORANGE
+                  : APP_THEME.APP_BASE_COLOR
               }
             ]}
             onPress={() => props.onPressed(props.item)}
@@ -89,8 +89,8 @@ const RouteListRow = props => {
               {visited
                 ? labels.COMPLETE
                 : statuscode == ACTIVITY_STATUS_LOV.IN_PROGRESS
-                  ? labels.CHECKOUT
-                  : labels.CHECKIN}
+                ? labels.CHECKOUT
+                : labels.CHECKIN}
             </Text>
           </TouchableOpacity>
         </View>
