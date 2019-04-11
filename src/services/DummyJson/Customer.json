@@ -1,57 +1,68 @@
 [
   {
     "id": "1001",
-    "name": "Walper super market",
+    "name": "FairPrice Finest",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer",
     "shopsize": "1200",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1001\",\"additional\":\"677\",\"street\":\"Adelaide St\",\"city\":\"Torontoe\",\"state\":\"Ontario\",\"postalcode\":\"M5H 1P6\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"Malaysia\",\"addressid\":\"1001\",\"additional\":\"6\",\"street\":\"Marine Parade Central\",\"city\":\"Singapore\",\"state\":\"\",\"postalcode\":\"449411\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1001\",\"firstname\":\"Cena\",\"lastname\":\"John\",\"countrycode\":\"\",\"phone\":\"778-886-1036\",\"alternatephone\":\"\",\"email\":\"cena@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1002",
-    "name": "George Street Shop",
+    "name": "Meidi-Ya Supermarket",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "1520",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1002\",\"additional\":\"3584\",\"street\":\"Thurston Dr\",\"city\":\"Ottawa\",\"state\":\"Ontario\",\"postalcode\":\"K1G 0Z2\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"Malaysia\",\"addressid\":\"1002\",\"additional\":\"#B1-50\",\"street\":\"Liang Court Shopping (117 River Valley Rd)\",\"city\":\"Singapore\",\"state\":\"\",\"postalcode\":\"179030\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"George\",\"lastname\":\"Sam\",\"countrycode\":\"\",\"phone\":\"613-513-1410\",\"alternatephone\":\"\",\"email\":\"george@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1003",
-    "name": "Edna Super market",
+    "name": "Mustafa Centre",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "800",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1003\",\"additional\":\"4365\",\"street\":\"Dufferin Streett\",\"city\":\"Toronto\",\"state\":\"Ontario\",\"postalcode\":\"M6H 4B6\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"Malaysia\",\"addressid\":\"1003\",\"additional\":\"145\",\"street\":\"Syed Alwi Rd\",\"city\":\"Singapore\",\"state\":\"\",\"postalcode\":\"207704\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Edna\",\"lastname\":\"Lousey\",\"countrycode\":\"\",\"phone\":\"778-886-1036\",\"alternatephone\":\"\",\"email\":\"Edna@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1004",
-    "name": "Frank A Barker Shop",
+    "name": "FairPrice Xtra",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "1100",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1004\",\"additional\":\"5019\",\"street\":\"Reserve St\",\"city\":\"Omemee\",\"state\":\"Ontario\",\"postalcode\":\"K0L 2S0\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"Malaysia\",\"addressid\":\"1004\",\"additional\":\"#B2-26\",\"street\":\"AMK Hub (53 Ang Mo Kio Ave 3)\",\"city\":\"Singapore\",\"state\":\"\",\"postalcode\":\"569933\",\"primary\":\"true\"}]",
     "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Frank\",\"lastname\":\"Barker\",\"countrycode\":\"\",\"phone\":\"705-799-3756\",\"alternatephone\":\"\",\"email\":\"frank.barker@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   },
   {
     "id": "1005",
-    "name": "T Blaker Super Mart",
+    "name": "Cold Storage",
     "registrationtype": "Wholesaler",
     "comment": "Appirio Demo Customer sample",
     "shopsize": "890",
     "pricebookid": "300000015102561",
-    "address": "[{\"country\":\"CA\",\"addressid\":\"1005\",\"additional\":\"1501 \",\"street\":\"Wyecroft Road\",\"city\":\"Burlington\",\"state\":\"Ontario\",\"postalcode\":\"L7R 3X7\",\"primary\":\"true\"}]",
-    "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Marjorie\",\"lastname\":\"Frazier\",\"countrycode\":\"\",\"phone\":\"604-519-3352\",\"alternatephone\":\"\",\"email\":\"Marjorie.Frazier@appirio.com\",\"primary\":\"true\"}]",
+    "address": "[{\"country\":\"Malaysia\",\"addressid\":\"1005\",\"additional\":\"#B1-01/05 \",\"street\":\"Kallang Leisure Park (5 Stadium Walk)\",\"city\":\"Singapore\",\"state\":\"\",\"postalcode\":\"397693\",\"primary\":\"true\"}]",
+    "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Marjorie\",\"lastname\":\"Frazier\",\"countrycode\":\"\",\"phone\":\"604-519-3352\",\"alternatephone\":\"\",\"email\":\"marjorie.frazier@appirio.com\",\"primary\":\"true\"}]",
+    "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
+  },
+  {
+    "id": "1006",
+    "name": "Sheng Siong Supermarket",
+    "registrationtype": "Wholesaler",
+    "comment": "Appirio Demo Customer sample",
+    "shopsize": "890",
+    "pricebookid": "300000015102561",
+    "address": "[{\"country\":\"Malaysia\",\"addressid\":\"1005\",\"additional\":\"52\",\"street\":\"Chin Swee Rd. #01-25\",\"city\":\"Singapore\",\"state\":\"\",\"postalcode\":\"160052\",\"primary\":\"true\"}]",
+    "contacts": "[{\"contactid\":\"1003\",\"firstname\":\"Marjorie\",\"lastname\":\"Frazier\",\"countrycode\":\"\",\"phone\":\"604-519-3352\",\"alternatephone\":\"\",\"email\":\"mary@appirio.com\",\"primary\":\"true\"}]",
     "extension": "[{\"name\":\"clusterpriority\",\"value\":\"Low\"}]"
   }
 ]
