@@ -1,0 +1,28 @@
+[
+  {
+    "__ORACO__Model_c": "Frontier",
+    "__ORACO__CurrentMileage_c": "12",
+    "__ORACO__BankName_c": "",
+    "__ORACO__LastServiceDate_c": "2018-09-28",
+    "__ORACO__Assortment_Id_c": "",
+    "__ORACO__StartingMileage_c": "12",
+    "RecordName": "Canada Route 101",
+    "__ORACO__DistributionCentre_Id_c": "300000002038723",
+    "__ORACO__Plate_c": "WADE C12",
+    "__ORACO__AccountNumber_c": "",
+    "__ORACO__RoutingNumber_c": "",
+    "__ORACO__TerritoryManager_c": "Tushar Shinde",
+    "Id": "300000015265713",
+    "__ORACO__NextServiceDate_c": "2019-04-24",
+    "__ORACO__Year_c": "2010",
+    "__ORACO__RestockingFrequency_c": "ORA_ACO_RESTOCK_FREQ_BIWEEKLY",
+    "__ORACO__PriceBook_Id_c": "300000015102561",
+    "__ORACO__TerritoryManager_Id_c": "300000002054282",
+    "__ORACO__ProcessingGroup_c": "",
+    "__ORACO__Assortment_c": "",
+    "__ORACO__Make_c": "Nissan",
+    "__ORACO__DistributionCentre_c": "Canada",
+    "CurrencyCode": "CAD",
+    "__ORACO__PriceBook_c": "Canada Price Book"
+  }
+]

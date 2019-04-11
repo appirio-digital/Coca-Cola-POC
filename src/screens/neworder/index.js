@@ -86,7 +86,7 @@ export default class Neworder extends Component {
       }
     } = this.props;
 
-    this.setState({ loading: true });
+    //   this.setState({ loading: true });
 
     try {
       const priceBookItem = await productActions.getPriceBookItems(
@@ -254,7 +254,7 @@ export default class Neworder extends Component {
           Order_Id_c: '',
           //Order_c: '',
           Product_Id_c: product.InventoryItemId,
-          Product_c: product.ItemNumber,
+          Product_c: product.Name,
           UOM_c: price ? price.PriceUOMCode : '',
           UnitPrice_c: price ? price.ListPrice : '',
           Discount_c: '0',
@@ -569,7 +569,7 @@ export default class Neworder extends Component {
           Order_Id_c: '',
           //Order_c: '',
           Product_Id_c: product.InventoryItemId,
-          Product_c: product.ItemNumber,
+          Product_c: product.Name,
           UOM_c: price ? price.PriceUOMCode : '',
           UnitPrice_c: price ? price.ListPrice : '',
           Discount_c: '0',
@@ -770,7 +770,7 @@ export default class Neworder extends Component {
           Order_Id_c: '',
           //Order_c: '',
           Product_Id_c: product.InventoryItemId,
-          Product_c: product.ItemNumber,
+          Product_c: product.Name,
           UOM_c: product.__ORACO__UOM_c,
           UnitPrice_c: price ? price.ListPrice : '',
           Discount_c: '0',

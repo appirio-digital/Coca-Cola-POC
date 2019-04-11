@@ -1,0 +1,16 @@
+[
+  {
+    "__ORACO__RouteDCId_c": "300000002038723",
+    "__ORACO__Route_Id_c": "300000015265713",
+    "RecordName": "RouteAlloc-000023",
+    "__ORACO__Primary_c": "true",
+    "Id": "300000015265715",
+    "__ORACO__Resource_Id_c": "300000015407272",
+    "RecordNumber": "3129",
+    "__ORACO__Route_c": "Canada Route 101",
+    "__ORACO__Resource_c": "Canadian User",
+    "CurrencyCode": "CAD",
+    "__ORACO__ResourceDCId_c": "300000002038723",
+    "__ORACO__DistributionCentre_Id_c": ""
+  }
+]

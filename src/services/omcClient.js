@@ -19,6 +19,9 @@ import PriceBookHeader from './DummyJson/PriceBookHeader.json';
 import PriceBookLine from './DummyJson/PriceBookLine.json';
 import Invoice from './DummyJson/Invoice.json';
 import InvoiceLineItem from './DummyJson/InvoiceLineItem.json';
+import Route from './DummyJson/Route.json';
+import RouteAllocation from './DummyJson/RouteAllocation.json';
+import RouteInventory from './DummyJson/RouteInventory.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -143,6 +146,15 @@ export const fetchObjectCollection = async (apiName, endPoint) => {
       break;
     case 'ORACO__InvoiceLineDSD_c':
       sampleJSON = InvoiceLineItem;
+      break;
+    case 'ORACO__Route_c':
+      sampleJSON = Route;
+      break;
+    case 'ORACO__RouteAllocation_c':
+      sampleJSON = RouteAllocation;
+      break;
+    case 'ORACO__RouteInventory_c':
+      sampleJSON = RouteInventory;
       break;
   }
 
