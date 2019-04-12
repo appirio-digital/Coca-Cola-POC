@@ -55,9 +55,10 @@ class Reports extends PureComponent {
     try {
       const paymentlistResponse = await customersActions.getInvoicePayment();
       //Filter payments based on selected date
-      const filteredPayments = paymentlistResponse.filter(payment => {
-        return payment.__ORACO__PaymentDate_c == date;
-      });
+      // const filteredPayments = paymentlistResponse.filter(payment => {
+      //   return payment.__ORACO__PaymentDate_c == date;
+      // });
+      const filteredPayments = paymentlistResponse;
       //Get Payment item if filteredPayments>0
       if (filteredPayments.length > 0) {
         const paymentInlineItemsResponse = await customersActions.getInvoicePaymentLine();

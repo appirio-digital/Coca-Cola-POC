@@ -36,8 +36,7 @@ export default class StockRequestList extends Component {
         activity =>
           activity.function == 'TASK' &&
           activity.subtype == 'STOCK_REQUEST' &&
-          activity.routeid == routeId &&
-          activity.duedate == moment(new Date()).format('YYYY-MM-DD')
+          activity.routeid == routeId
       );
 
     const disableNewRequest =

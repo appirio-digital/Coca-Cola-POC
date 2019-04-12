@@ -93,7 +93,7 @@ class Invoice extends Component {
     return (
       <InvoiceListRow
         onPressed={() => {}}
-        country={profile.PrimaryCountry_c}
+        country="Singapore"
         onPaymentPress={this.invoiceItemClickHandler}
         item={{ ...item.item, visited: true }}
       />

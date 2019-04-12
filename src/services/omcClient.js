@@ -23,6 +23,8 @@ import Route from './DummyJson/Route.json';
 import RouteAllocation from './DummyJson/RouteAllocation.json';
 import RouteInventory from './DummyJson/RouteInventory.json';
 import Template from './DummyJson/check.json';
+import ORACO__PaymentLineDSD_c from './DummyJson/ORACO__PaymentLineDSD_c.json';
+import ORACO__PaymentDSD_c from './DummyJson/ORACO__PaymentDSD_c.json';
 
 export const API_END_POINT = {
   ACCOUNT: 'Accounts',
@@ -159,6 +161,12 @@ export const fetchObjectCollection = async (apiName, endPoint) => {
       break;
     case 'check':
       sampleJSON = Template;
+      break;
+    case 'ORACO__PaymentDSD_c':
+      sampleJSON = ORACO__PaymentDSD_c;
+      break;
+    case 'ORACO__PaymentLineDSD_c':
+      sampleJSON = ORACO__PaymentLineDSD_c;
       break;
   }
 
