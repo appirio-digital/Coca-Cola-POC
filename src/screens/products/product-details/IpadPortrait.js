@@ -6,7 +6,10 @@ import {
   ScrollView,
   Dimensions,
   StyleSheet,
-  Image
+  Image,
+  TouchableOpacity,
+  Linking,
+  Alert
 } from 'react-native';
 import { APP_FONTS, APP_THEME } from '../../../constants';
 import AttrbuteRow from './AttrbuteRow';
@@ -67,6 +70,20 @@ export default class IpadPortrait extends Component {
     }
   };
 
+  showAR = async () => {
+    let url = 'augment://model3ds/dca857a0-c38a-466c-a6c2-72bd9fc23be0';
+    try {
+      let supported = await Linking.canOpenURL(url);
+      if (!supported) {
+        Alert.alert('Error', 'AR app not available on this iPad.');
+      } else {
+        return Linking.openURL(url);
+      }
+    } catch (error) {
+      console.error('An error occurred', error);
+    }
+  };
+
   render() {
     const { product } = this.props;
     const {
@@ -110,6 +127,14 @@ export default class IpadPortrait extends Component {
 
     return (
       <ScrollView contentContainerStyle={styles.container}>
+        <TouchableOpacity
+          style={styles.buttonView}
+          onPress={() => {
+            this.showAR();
+          }}
+        >
+          <Text style={styles.itemTextButton}>View AR</Text>
+        </TouchableOpacity>
         <CameraModal
           visible={this.state.captureImage}
           onCameraCapture={this.onCameraCapture}
@@ -210,5 +235,26 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-start',
     marginTop: 40
+  },
+  buttonView: {
+    borderColor: APP_THEME.APP_BASE_COLOR,
+    borderWidth: 1,
+    borderRadius: 3,
+    width: 130,
+    padding: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 5,
+    marginTop: 5
+  },
+  itemTextButton: {
+    color: APP_THEME.APP_BASE_COLOR,
+    fontFamily: APP_FONTS.FONT_SEMIBOLD,
+    margin: 0,
+    paddingLeft: 5,
+    paddingRight: 5,
+    fontSize: 14,
+    lineHeight: 18
   }
 });

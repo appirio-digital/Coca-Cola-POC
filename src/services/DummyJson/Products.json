@@ -169,5 +169,22 @@
     "Description": "Apple Juice",
     "__ORACO__ContainerClass_c": "",
     "ProductImage": "https://www.coca-colaproductfacts.com/content/dam/Productfacts-Refresh/Products/minute-maid-apple-juice-100-6-oz.jpg"
+  },
+  {
+    "__ORACO__Size_c": "",
+    "__ORACO__EligibleForShipment_c": "true",
+    "__ORACO__ContainerClass_Id_c": "",
+    "__ORACO__Category_c": "POC Sales",
+    "__ORACO__Brand_c": "",
+    "__ORACO__IneligibleForShip_c": "false",
+    "InventoryItemId": "100000000756000",
+    "Name": "ICOOL",
+    "EligibleToSellFlag": "true",
+    "DefaultUOM": "EA",
+    "InvOrgId": "300000002056111",
+    "ItemNumber": "C_101",
+    "Description": "ICOOL",
+    "__ORACO__ContainerClass_c": "",
+    "ProductImage": "https://i.ibb.co/rQk4F9N/Screenshot-2019-04-13-at-7-44-01-PM.png"
   }
 ]
