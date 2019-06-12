@@ -635,7 +635,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: APP_THEME.APP_BASE_COLOR,
+    backgroundColor: APP_THEME.APP_BUTTON_COLOR,
     flexDirection: 'row'
   },
   headerButtonText: {
