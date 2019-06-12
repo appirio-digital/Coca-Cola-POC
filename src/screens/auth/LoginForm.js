@@ -18,7 +18,7 @@ import {
   Checkbox
 } from "../../components/common";
 import { connect } from "react-redux";
-import { APP_FONTS } from "../../constants";
+import { APP_FONTS, APP_THEME } from "../../constants";
 import Loader from "../../components/common/Loader";
 import { labels } from "../../stringConstants";
 
@@ -82,7 +82,7 @@ class LoginForm extends Component {
           }
         }
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   storeCredsToAsyncStorage = () => {
@@ -104,10 +104,10 @@ class LoginForm extends Component {
     try {
       const { email, password } = this.state;
       this.props.authActions.authenticateOAuthMCSUser(email, password);
-    } catch (error) {}
+    } catch (error) { }
   };
 
-  forgotPasswordClicked = () => {};
+  forgotPasswordClicked = () => { };
 
   renderError = error => {
     if (error) {
@@ -200,7 +200,12 @@ class LoginForm extends Component {
               />
             </CardSection>
             <CardSection>
-              <Button onPress={this.loginClicked}>{labels.SIGN_IN}</Button>
+              <Button
+                onPress={this.loginClicked}
+                style={{ backgroundColor: APP_THEME.APP_BUTTON_COLOR }}
+              >
+                {labels.SIGN_IN}
+              </Button>
             </CardSection>
             {this.renderForTouchIDSupportCheckbox()}
             {this.renderError(this.props.auth.errorMessage)}

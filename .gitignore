@@ -37,7 +37,11 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
+.env	
+=======
 .env
+>>>>>>> fe5f3b1216dd5bcf08a63ac72bc972db92582e2d
 
 # BUCK
 buck-out/
@@ -64,4 +68,8 @@ package-lock.json
 yarn.lock	
 android/settings.gradle	
 android/app/build.gradle	
+<<<<<<< HEAD
+android/app/src/main/java/com/jtisales/MainApplication.java
+=======
 android/app/src/main/java/com/jtisales/MainApplication.java 
+>>>>>>> fe5f3b1216dd5bcf08a63ac72bc972db92582e2d

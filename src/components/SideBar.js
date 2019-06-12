@@ -22,7 +22,7 @@ class SideBar extends Component {
     isOnline: true
   };
 
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
   async componentDidMount() {
     const {
@@ -40,7 +40,7 @@ class SideBar extends Component {
   };
   renderItem = item => {
     const { image, id, route, label } = item.item;
-    const color = id == this.state.selectedMenu ? '#122733' : '#fff';
+    const color = id == this.state.selectedMenu ? '#cccccc' : '#fff';
     return (
       <TouchableOpacity
         style={[
@@ -100,7 +100,7 @@ class SideBar extends Component {
           },
           {
             text: labels.NO,
-            onPress: () => {},
+            onPress: () => { },
             style: 'cancel'
           }
         ]
@@ -115,7 +115,7 @@ class SideBar extends Component {
       [
         {
           text: labels.CANCEL,
-          onPress: () => {},
+          onPress: () => { },
           style: 'cancel'
         },
         {
@@ -128,7 +128,7 @@ class SideBar extends Component {
               this.props.navigation.navigation.dispatch({
                 type: 'USER_LOGOUT'
               });
-            } catch (error) {}
+            } catch (error) { }
           }
         }
       ],
