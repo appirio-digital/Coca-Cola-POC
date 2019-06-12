@@ -295,7 +295,7 @@ const Styles = {
     paddingTop: 50
   },
   generateButtonStyle: {
-    backgroundColor: APP_THEME.APP_BASE_COLOR,
+    backgroundColor: APP_THEME.APP_BUTTON_COLOR,
     width: 178,
     height: 40,
     borderRadius: 2,

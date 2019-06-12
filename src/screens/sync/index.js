@@ -564,7 +564,7 @@ const Styles = {
     paddingRight: 15,
     borderRadius: 2,
     borderWidth: 1,
-    borderColor: APP_THEME.APP_BASE_COLOR
+    borderColor: APP_THEME.APP_BASE_COLORapp_butt
   },
   databaseErasedIconStyle: {
     fontFamily: APP_FONTS.FONT_MATERIAL_DESIGN,

@@ -32,7 +32,7 @@ const Stepper = props => {
       <View style={styles.buttonContainer}>
         <IconButton
           onPress={substractClicked}
-          bgColor={APP_THEME.APP_STEPPER_BUTTON_COLOR}
+          bgColor={APP_THEME.APP_BUTTON_COLOR}
         >
           
         </IconButton>
@@ -52,7 +52,7 @@ const Stepper = props => {
       <View style={styles.buttonContainer}>
         <IconButton
           onPress={addClicked}
-          bgColor={APP_THEME.APP_STEPPER_BUTTON_COLOR}
+          bgColor={APP_THEME.APP_BUTTON_COLOR}
         >
           
         </IconButton>
