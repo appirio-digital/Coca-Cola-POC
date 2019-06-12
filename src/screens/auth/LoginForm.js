@@ -82,7 +82,7 @@ class LoginForm extends Component {
           }
         }
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   storeCredsToAsyncStorage = () => {
@@ -104,10 +104,10 @@ class LoginForm extends Component {
     try {
       const { email, password } = this.state;
       this.props.authActions.authenticateOAuthMCSUser(email, password);
-    } catch (error) {}
+    } catch (error) { }
   };
 
-  forgotPasswordClicked = () => {};
+  forgotPasswordClicked = () => { };
 
   renderError = error => {
     if (error) {
@@ -236,7 +236,11 @@ const styles = {
     justifyContent: "flex-end",
     marginBottom: 40
   },
+<<<<<<< HEAD
+  logoStyle: { height: 100, width: 400 },
+=======
   logoStyle: { height: 100, width: 450 },
+>>>>>>> fe5f3b1216dd5bcf08a63ac72bc972db92582e2d
   topLogoStyle: { height: 100, width: 100 },
   loginContainer: {
     flexDirection: "row",
