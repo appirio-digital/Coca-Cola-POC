@@ -47,7 +47,6 @@ target 'JTISales' do
     
     pod 'Firebase/Core', '~> 5.11.0'
 
-    pod 'Firebase/Core'
   end
   
   post_install do |installer|
