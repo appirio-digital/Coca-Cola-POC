@@ -78,7 +78,7 @@ PODS:
   - nanopb/encode (0.3.901)
   - React (0.55.4):
     - React/Core (= 0.55.4)
-  - react-native-date-picker (2.2.1):
+  - react-native-date-picker (2.4.2):
     - React
   - react-native-google-maps (0.21.0):
     - Google-Maps-iOS-Utils (= 2.1.0)
@@ -131,17 +131,16 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNFS (2.12.1):
+  - RNFS (2.13.3):
     - React
   - RNPDF (0.4.1):
     - React
-  - RNSVG (6.5.2):
+  - RNSVG (6.5.3):
     - React
   - yoga (0.55.4.React)
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - Firebase/Core
   - Firebase/Core (~> 5.11.0)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
@@ -219,15 +218,15 @@ SPEC CHECKSUMS:
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  React: aa2040dbb6f317b95314968021bd2888816e03d5
-  react-native-date-picker: e6ce9225e56a3aeaddc01847be02c7ed1477de58
-  react-native-google-maps: 2cfe3b01f8422c7dae51d8764139fd70f888cfce
-  react-native-maps: 066c2afcc89e18726377bcc685315f989ca22449
-  RNFS: bbb1a64eb245763daf34aea86f97c97c4e85f74c
-  RNPDF: f27f11d7dbbb49da65375c401eca73b7ef1d7b00
-  RNSVG: 6252323c0312735f0af5f58b5adf2965b6a9ffbf
-  yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
+  React: 755b16d9a9387e856d4dce6528130c51e4d409b8
+  react-native-date-picker: f4ebac6683dc269c9b8e50519177d184701b2f48
+  react-native-google-maps: 68a831730110823d3dadfea0e133f0f4426cd213
+  react-native-maps: fb06a43ce6884256097eec1dd69d23957b71df88
+  RNFS: c9bbde46b0d59619f8e7b735991c60e0f73d22c1
+  RNPDF: 46d069849652f037118a0d6f0b46aa4812d4aafa
+  RNSVG: 4501a5e968f1eb962f5481b0da53dfb59260e9b6
+  yoga: c3ce6137f85f60c93a834235d7f08e2b44a42eed
 
-PODFILE CHECKSUM: ca6081948f05f2edcde7cb11df6b465f276c7f73
+PODFILE CHECKSUM: 7079dff09c0bdb298ad206c5eaae900f95262bea
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

@@ -1,7 +1,7 @@
-import React, { PureComponent, Component } from 'react';
-import MapView from 'react-native-maps';
-import { View, Text, StyleSheet } from 'react-native';
-import { APP_THEME, APP_FONTS } from '../../../constants';
+import React, { PureComponent, Component } from "react";
+import MapView from "react-native-maps";
+import { View, Text, StyleSheet } from "react-native";
+import { APP_THEME, APP_FONTS } from "../../../constants";
 
 class Map extends Component {
   state = {
@@ -97,13 +97,15 @@ class Map extends Component {
   };
 
   renderCallout = (point, index) => {
-    const { Subject, AccountAddress, AccountName } = point.activity;
+    const { Subject, AccountAddress, AccountName = null } = point.activity;
     return (
       <MapView.Callout
         tooltip={false}
         onPress={e => this.onCalloutClicked(e, index)}
       >
-        <Text style={styles.calloutAccountName}>{AccountName}</Text>
+        <Text style={styles.calloutAccountName}>
+          {AccountName && AccountName}
+        </Text>
         <Text style={styles.calloutAccountNumber}>{Subject}</Text>
         <Text style={styles.calloutAddress}>{AccountAddress}</Text>
       </MapView.Callout>
@@ -175,21 +177,21 @@ const styles = StyleSheet.create({
     color: APP_THEME.APP_FONT_COLOR_DARK,
     fontFamily: APP_FONTS.FONT_SEMIBOLD,
     fontSize: 13,
-    fontWeight: '600',
+    fontWeight: "600",
     lineHeight: 16
   },
   calloutAccountNumber: {
     color: APP_THEME.APP_BASE_COLOR,
     fontFamily: APP_FONTS.FONT_SEMIBOLD,
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: "600",
     lineHeight: 15
   },
   calloutAddress: {
     color: APP_THEME.APP_LIST_FONT_COLOR,
     fontFamily: APP_FONTS.FONT_SEMIBOLD,
     fontSize: 12,
-    fontWeight: 'normal',
+    fontWeight: "normal",
     lineHeight: 15
   }
 });

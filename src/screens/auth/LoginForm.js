@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   AsyncStorage,
   Alert,
@@ -7,8 +7,8 @@ import {
   Text,
   NetInfo,
   NativeModules
-} from 'react-native';
-import TouchID from 'react-native-touch-id';
+} from "react-native";
+import TouchID from "react-native-touch-id";
 import {
   Card,
   CardSection,
@@ -16,16 +16,16 @@ import {
   Button,
   TextButton,
   Checkbox
-} from '../../components/common';
-import { connect } from 'react-redux';
-import { APP_FONTS } from '../../constants';
-import Loader from '../../components/common/Loader';
-import { labels } from '../../stringConstants';
+} from "../../components/common";
+import { connect } from "react-redux";
+import { APP_FONTS } from "../../constants";
+import Loader from "../../components/common/Loader";
+import { labels } from "../../stringConstants";
 
 class LoginForm extends Component {
   state = {
-    email: 'Coke.User', //'Canadian.User',
-    password: 'Wipro@1234',
+    email: "Coke.User", //'Canadian.User',
+    password: "Wipro@1234",
     autoLogin: false,
     touchIdAvailable: false
   };
@@ -39,25 +39,25 @@ class LoginForm extends Component {
       const touchSupport = await TouchID.isSupported();
       this.setState({ touchIdAvailable: touchSupport });
       const storageData = await AsyncStorage.multiGet([
-        'email',
-        'password',
-        'isAutoLoginEnabled'
+        "email",
+        "password",
+        "isAutoLoginEnabled"
       ]);
       const credentials = storageData.map(([key, value], index) => {
         return { key: key, value: value };
       });
-      const email = '';
-      const password = '';
-      const isAutoLoginEnabled = '';
+      const email = "";
+      const password = "";
+      const isAutoLoginEnabled = "";
       credentials.forEach(cred => {
         switch (cred.key) {
-          case 'email':
+          case "email":
             email = cred.value;
             break;
-          case 'password':
+          case "password":
             password = cred.value;
             break;
-          case 'isAutoLoginEnabled':
+          case "isAutoLoginEnabled":
             isAutoLoginEnabled = JSON.parse(cred.value);
             break;
           default:
@@ -67,13 +67,13 @@ class LoginForm extends Component {
       this.setState({ autoLogin: isAutoLoginEnabled });
       if (email && password && isAutoLoginEnabled === true) {
         const optionalConfigObject = {
-          title: 'Authentication Required', // Android
-          color: '#e00606', // Android,
-          fallbackLabel: 'Show Passcode' // iOS (if empty, then label is hidden)
+          title: "Authentication Required", // Android
+          color: "#e00606", // Android,
+          fallbackLabel: "Show Passcode" // iOS (if empty, then label is hidden)
         };
         if (touchSupport) {
           const success = await TouchID.authenticate(
-            'Login using TouchId',
+            "Login using TouchId",
             optionalConfigObject
           );
           if (success) {
@@ -87,13 +87,13 @@ class LoginForm extends Component {
 
   storeCredsToAsyncStorage = () => {
     const { email, password } = this.state;
-    AsyncStorage.setItem('email', email);
-    AsyncStorage.setItem('password', password);
-    AsyncStorage.setItem('isAutoLoginEnabled', JSON.stringify(true));
+    AsyncStorage.setItem("email", email);
+    AsyncStorage.setItem("password", password);
+    AsyncStorage.setItem("isAutoLoginEnabled", JSON.stringify(true));
   };
 
   removeCredsFromAsyncStorage = () => {
-    AsyncStorage.multiRemove(['email', 'password', 'isAutoLoginEnabled']);
+    AsyncStorage.multiRemove(["email", "password", "isAutoLoginEnabled"]);
   };
 
   autoLoginCheckboxClicked = () => {
@@ -120,13 +120,13 @@ class LoginForm extends Component {
   };
 
   updateOnlineStatus = async () => {
-    const ForceOfflineFlag = await AsyncStorage.getItem('ForceOfflineFlag');
+    const ForceOfflineFlag = await AsyncStorage.getItem("ForceOfflineFlag");
     const networkConnectivityFlag = await AsyncStorage.getItem(
-      'networkConnectivity'
+      "networkConnectivity"
     );
-    const isConnected = networkConnectivityFlag == 'true';
+    const isConnected = networkConnectivityFlag == "true";
     NativeModules.SyncManager.setOfflineMode({
-      connectivity: isConnected && ForceOfflineFlag != 'true'
+      connectivity: isConnected && ForceOfflineFlag != "true"
     });
   };
 
@@ -138,7 +138,7 @@ class LoginForm extends Component {
         this.removeCredsFromAsyncStorage();
       }
       this.updateOnlineStatus();
-      this.props.navigation.navigate('App');
+      this.props.navigation.navigate("App");
     }
   }
 
@@ -212,7 +212,7 @@ class LoginForm extends Component {
         </View>
         <View style={logoContainerStyle}>
           <Image
-            source={require('../../../assets/images/cocacola_logo.png')}
+            source={require("../../images/cocacola_logo_new.png")}
             style={logoStyle}
           />
         </View>
@@ -222,19 +222,19 @@ class LoginForm extends Component {
 }
 //<TextButton>{`${labels.FORGOT_PASSWORD}${'?'}`}</TextButton>
 const styles = {
-  mainContainerStyleFlex1: { flex: 1, backgroundColor: 'white' },
+  mainContainerStyleFlex1: { flex: 1, backgroundColor: "white" },
   mainContainerStyleFlex3: { flex: 0.5 },
   mainContainerStyleFlex2: { flex: 2 },
   logoContainerStyle: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
+    alignItems: "center",
+    justifyContent: "flex-end",
     marginBottom: 40
   },
-  logoStyle: { height: 61, width: 181 },
+  logoStyle: { height: 100, width: 450 },
   topLogoStyle: { height: 100, width: 100 },
   loginContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     flex: 2
   },
   errorFontStyle: {
