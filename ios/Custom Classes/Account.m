@@ -26,18 +26,6 @@
   
   NSString * foreignKey = [[NSString alloc] initWithFormat:@"%@",self.SourceSystem];
   SyncManager *manager = [[SyncManager alloc] init];
-  [manager findObjectWithApiName:@"JTI_SALES" endPoint:@"contacts" key:@"SourceSystemReferenceValue" value:foreignKey completion:^(NSArray<Contact *> * mobileObjects) {
-    for (Contact * contactObject in mobileObjects) {
-      if (contactObject.AccountPartyNumber != self.PartyNumber){
-        contactObject.AccountPartyNumber = self.PartyNumber;
-        [contactObject saveResourceOnSuccess:^(id mobileObject) {
-          NSLog(@"%@",mobileObject);
-        } OnError:^(NSError *error) {
-          NSLog(@"Error %@",error.localizedDescription);
-        }];
-      }
-    }
-  }];
 }
 
 @end

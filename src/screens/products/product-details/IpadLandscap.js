@@ -1,5 +1,5 @@
-import React, { PureComponent, Component } from 'react';
-import { isEmpty } from 'lodash';
+import React, { PureComponent, Component } from "react";
+import { isEmpty } from "lodash";
 
 import {
   View,
@@ -11,22 +11,22 @@ import {
   TouchableOpacity,
   Linking,
   Alert
-} from 'react-native';
-import { APP_FONTS, APP_THEME } from '../../../constants';
-import AttrbuteRow from './AttrbuteRow';
-import { labels } from '../../../stringConstants';
-import { CameraModal } from '../../../components/common/CameraModal';
-import { Button } from '../../../components/common';
+} from "react-native";
+import { APP_FONTS, APP_THEME } from "../../../constants";
+import AttrbuteRow from "./AttrbuteRow";
+import { labels } from "../../../stringConstants";
+import { CameraModal } from "../../../components/common/CameraModal";
+import { Button } from "../../../components/common";
 import {
   fetchFile,
   API_END_POINT,
   API_NAME
-} from '../../../services/omcClient';
+} from "../../../services/omcClient";
 
 export default class IpadLandscap extends Component {
   state = {
     captureImage: false,
-    filePath: ''
+    filePath: ""
   };
   onCameraCapture = imagePath => {
     const { captureImage } = this.state;
@@ -71,16 +71,16 @@ export default class IpadLandscap extends Component {
   };
 
   showAR = async () => {
-    let url = 'augment://model3ds/dca857a0-c38a-466c-a6c2-72bd9fc23be0';
+    let url = "augment://model3ds/dca857a0-c38a-466c-a6c2-72bd9fc23be0";
     try {
       let supported = await Linking.canOpenURL(url);
       if (!supported) {
-        Alert.alert('Error', 'AR app not available on this iPad.');
+        Alert.alert("Error", "AR app not available on this iPad.");
       } else {
         return Linking.openURL(url);
       }
     } catch (error) {
-      console.error('An error occurred', error);
+      console.error("An error occurred", error);
     }
   };
 
@@ -106,7 +106,7 @@ export default class IpadLandscap extends Component {
           uri: ProductImage,
           scale: 1
         }
-      : require('../../../images/cocacola_logo.png');
+      : require("../../../images/cocacola_logo_new.png");
 
     return (
       <ScrollView contentContainerStyle={styles.container}>
@@ -138,50 +138,50 @@ export default class IpadLandscap extends Component {
           <View
             style={{
               marginTop: 10,
-              justifyContent: 'space-between'
+              justifyContent: "space-between"
             }}
           >
             <View style={styles.attrbuteContainer}>
               <View
                 style={{
                   flex: 1,
-                  justifyContent: 'flex-start'
+                  justifyContent: "flex-start"
                 }}
               >
                 <AttrbuteRow
-                  title={labels.PRODUCT_SIZE + ':'}
+                  title={labels.PRODUCT_SIZE + ":"}
                   value={__ORACO__Size_c}
                 />
                 <AttrbuteRow
-                  title={labels.PRODUCT_ELIGIBLITY + ':'}
+                  title={labels.PRODUCT_ELIGIBLITY + ":"}
                   value={__ORACO__EligibleForShipment_c}
                 />
                 <AttrbuteRow
-                  title={labels.PRODUCT_COTAINER_ID + ':'}
+                  title={labels.PRODUCT_COTAINER_ID + ":"}
                   value={__ORACO__ContainerClass_Id_c}
                 />
                 <AttrbuteRow
-                  title={labels.PRODUCT_DEFAULT_UOM + ':'}
+                  title={labels.PRODUCT_DEFAULT_UOM + ":"}
                   value={DefaultUOM}
                 />
               </View>
               <View
                 style={{
                   flex: 1,
-                  justifyContent: 'flex-end'
+                  justifyContent: "flex-end"
                 }}
               >
                 <AttrbuteRow
-                  title={labels.PRODUCT_BRAND + ':'}
+                  title={labels.PRODUCT_BRAND + ":"}
                   value={__ORACO__Brand_c}
                 />
-                <AttrbuteRow title={labels.STATUS + ':'} value={ActiveFlag} />
+                <AttrbuteRow title={labels.STATUS + ":"} value={ActiveFlag} />
                 <AttrbuteRow
-                  title={labels.CATEGORY + ':'}
-                  value={category ? category.ProdGroupName : ''}
+                  title={labels.CATEGORY + ":"}
+                  value={category ? category.ProdGroupName : ""}
                 />
                 <AttrbuteRow
-                  title={labels.ELIGIBLE_FOR_SALE + ':'}
+                  title={labels.ELIGIBLE_FOR_SALE + ":"}
                   value={EligibleToSellFlag}
                 />
               </View>
@@ -213,24 +213,24 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: APP_THEME.APP_BASE_COLOR_WHITE,
     padding: 20,
-    flexDirection: 'row'
+    flexDirection: "row"
   },
 
   productImage: {
     marginTop: 30,
-    width: Dimensions.get('window').width / 2 - 50,
+    width: Dimensions.get("window").width / 2 - 50,
     height: 300,
-    resizeMode: 'contain'
+    resizeMode: "contain"
   },
   productIdTextStyle: {
     fontFamily: APP_FONTS.FONT_REGULAR,
-    fontWeight: '600',
+    fontWeight: "600",
     fontSize: 20,
     color: APP_THEME.APP_FONT_COLOR_REGULAR
   },
   productNameTextStyle: {
     fontFamily: APP_FONTS.FONT_REGULAR,
-    fontWeight: '700',
+    fontWeight: "700",
     fontSize: 24,
     color: APP_THEME.APP_BASE_COLOR,
     marginTop: 10
@@ -239,12 +239,12 @@ const styles = StyleSheet.create({
     height: 50,
     width: 350
   },
-  attrbuteContainer: { flexDirection: 'row', marginTop: 30 },
+  attrbuteContainer: { flexDirection: "row", marginTop: 30 },
   productDesTextStyle: {
     fontFamily: APP_FONTS.FONT_REGULAR,
     fontSize: 16,
     color: APP_THEME.APP_LIST_FONT_COLOR,
-    alignItems: 'flex-start',
+    alignItems: "flex-start",
     marginTop: 10
   },
   buttonView: {
@@ -253,9 +253,9 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     width: 130,
     padding: 5,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     marginBottom: 5,
     marginTop: 5
   },
