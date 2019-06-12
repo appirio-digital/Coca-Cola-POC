@@ -562,7 +562,7 @@ class Route extends Component {
                   ? APP_THEME.APP_LIST_BORDER_COLOR
                   : inRoute
                   ? APP_THEME.APP_FONT_COLOR_ORANGE
-                  : APP_THEME.APP_BASE_COLOR
+                  : APP_THEME.APP_BUTTON_COLOR
               }
             ]}
             disabled={isStartDayDisable ? true : false}
