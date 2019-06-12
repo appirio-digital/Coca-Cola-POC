@@ -118,7 +118,7 @@ class Customer extends Component {
           style={{ width: 200, paddingTop: 5, paddingBottom: 5, height: 50 }}
         >
           <IconButton
-            bgColor={APP_THEME.APP_BASE_COLOR}
+            bgColor={APP_THEME.APP_BUTTON_COLOR}
             onPress={this.newCustomerClickHandler()}
           >
             <Text
