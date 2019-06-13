@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   View,
   FlatList,
   StyleSheet,
   Text,
   TouchableOpacity
-} from 'react-native';
+} from "react-native";
 
-import OrderListRow from './OrderRow';
-import { APP_FONTS, APP_THEME, APP_ROUTE } from '../../../../constants';
-import { labels } from '../../../../stringConstants';
+import OrderListRow from "./OrderRow";
+import { APP_FONTS, APP_THEME, APP_ROUTE } from "../../../../constants";
+import { labels } from "../../../../stringConstants";
 import {
   fetchObjectCollection,
   API_END_POINT,
   API_NAME_POC
-} from '../../../../services/omcClient';
+} from "../../../../services/omcClient";
 export default class Orders extends Component {
   state = {
     orderList: [],
@@ -57,7 +57,7 @@ export default class Orders extends Component {
     if (isReloadOrders && isReloadOrders) {
       customersActions.reloadOrder(false);
       const response = await customersActions.getCustomerOrder();
-     // customersActions.getAllCustomers();
+      // customersActions.getAllCustomers();
       const orderList =
         response &&
         response.filter(order => order.Account_Id_c == this.state.accountId);
@@ -78,7 +78,7 @@ export default class Orders extends Component {
     return (
       <View
         style={{
-          backgroundColor: '#fff',
+          backgroundColor: "#fff",
           flex: 1,
           paddingLeft: 20,
           paddingRight: 20
@@ -108,11 +108,11 @@ export default class Orders extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 20,
     height: 50,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   headerText: {
     flex: 1,
@@ -120,36 +120,36 @@ const styles = StyleSheet.create({
     fontFamily: APP_FONTS.FONT_BOLD,
     fontSize: 18,
     lineHeight: 22,
-    fontWeight: '600',
-    flexDirection: 'row',
-    justifyContent: 'center'
+    fontWeight: "600",
+    flexDirection: "row",
+    justifyContent: "center"
   },
   headerButton: {
     flex: 0.4,
 
     height: 40,
     borderRadius: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: APP_THEME.APP_BASE_COLOR,
-    flexDirection: 'row'
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: APP_THEME.APP_BUTTON_COLOR,
+    flexDirection: "row"
   },
   headerButtonText: {
     fontFamily: APP_FONTS.FONT_REGULAR,
     fontSize: 16,
     lineHeight: 19,
-    fontWeight: '600',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontWeight: "600",
+    alignItems: "center",
+    justifyContent: "center",
     color: APP_THEME.APP_BASE_COLOR_WHITE
   },
   headerButtonIcon: {
     fontFamily: APP_FONTS.FONT_MATERIAL_DESIGN,
     fontSize: 16,
     lineHeight: 19,
-    fontWeight: '600',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontWeight: "600",
+    alignItems: "center",
+    justifyContent: "center",
     color: APP_THEME.APP_BASE_COLOR_WHITE
   }
 });

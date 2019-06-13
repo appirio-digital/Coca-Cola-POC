@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from "react";
 import {
   StyleSheet,
   View,
@@ -9,17 +9,17 @@ import {
   Alert,
   KeyboardAvoidingView,
   AsyncStorage
-} from 'react-native';
-import isEmpty from 'lodash/isEmpty';
+} from "react-native";
+import isEmpty from "lodash/isEmpty";
 import {
   APP_FONTS,
   APP_THEME,
   APP_ROUTE,
   google_maps_geocoding_api_endpoint
-} from '../../../../constants';
-import { GOOGLE_MAPS_API_KEY } from 'react-native-dotenv';
-import { labels } from '../../../../stringConstants';
-import ModalDropdown from 'react-native-modal-dropdown';
+} from "../../../../constants";
+import { GOOGLE_MAPS_API_KEY } from "react-native-dotenv";
+import { labels } from "../../../../stringConstants";
+import ModalDropdown from "react-native-modal-dropdown";
 import {
   createNewObject,
   API_NAME,
@@ -27,50 +27,50 @@ import {
   SyncPinPriority,
   API_JTI_CUSTOMER_API,
   fetchObjectCollection
-} from '../../../../services/omcClient';
-import { pick, split, get } from 'lodash';
-import Loader from '../../../../components/common/Loader';
-import { randomString } from '../../../../utility';
-import { find, findIndex } from 'lodash';
-import RuleEngine from 'node-rules';
+} from "../../../../services/omcClient";
+import { pick, split, get } from "lodash";
+import Loader from "../../../../components/common/Loader";
+import { randomString } from "../../../../utility";
+import { find, findIndex } from "lodash";
+import RuleEngine from "node-rules";
 //import { Engine } from 'json-rules-engine';
-import JSONfn from 'json-fn';
+import JSONfn from "json-fn";
 
-import validationRules from './rules.json';
+import validationRules from "./rules.json";
 
-import { Click, validateObject } from './Observer';
+import { Click, validateObject } from "./Observer";
 
 class CustomerInfo extends PureComponent {
   click = new Click();
   state = {
     customer: {
-      id: '',
-      pricebookid: '',
-      routeid: '',
-      name: '',
-      comment: '',
-      registrationtype: '',
-      shopsize: '',
-      clusterpriority: '',
-      OrganizationDEO_JTI_PromotionAcceptanceRatio_c: '',
+      id: "",
+      pricebookid: "",
+      routeid: "",
+      name: "",
+      comment: "",
+      registrationtype: "",
+      shopsize: "",
+      clusterpriority: "",
+      OrganizationDEO_JTI_PromotionAcceptanceRatio_c: "",
       primaryaddress: {
-        addressid: '',
-        street: '',
-        city: '',
-        country: '',
-        additional: '',
-        postalcode: '',
-        state: ''
+        addressid: "",
+        street: "",
+        city: "",
+        country: "",
+        additional: "",
+        postalcode: "",
+        state: ""
       },
       primarycontact: {
-        contactid: '',
-        firstname: '',
-        lastname: '',
-        countrycode: '',
-        phone: '',
-        alternatephone: '',
-        email: '',
-        primary: 'true'
+        contactid: "",
+        firstname: "",
+        lastname: "",
+        countrycode: "",
+        phone: "",
+        alternatephone: "",
+        email: "",
+        primary: "true"
       },
       address: [],
       contacts: [],
@@ -79,7 +79,7 @@ class CustomerInfo extends PureComponent {
     Contact: [],
     edit: false,
     loading: false,
-    uuid: `${'A#'}${randomString(20)}`
+    uuid: `${"A#"}${randomString(20)}`
   };
 
   onSaveHandler = async data => {
@@ -94,7 +94,7 @@ class CustomerInfo extends PureComponent {
     //   SourceSystem = params.customer.SourceSystem;
     // }
 
-    console.log('accountData', data);
+    console.log("accountData", data);
 
     if (data.contacts) {
       data = { ...data, contacts: JSONfn.stringify(data.contacts) };
@@ -108,7 +108,7 @@ class CustomerInfo extends PureComponent {
       data = { ...data, extension: JSONfn.stringify(data.extension) };
     }
 
-    console.log('accountData', data);
+    console.log("accountData", data);
 
     try {
       this.setState({ loading: true });
@@ -116,7 +116,7 @@ class CustomerInfo extends PureComponent {
         data,
         API_JTI_CUSTOMER_API,
         API_END_POINT.CUSTOMERS,
-        'id',
+        "id",
         SyncPinPriority.High
       );
       this.setState({ loading: false });
@@ -130,9 +130,9 @@ class CustomerInfo extends PureComponent {
         this.setState({ loading: false });
         setTimeout(() => {
           if (error.message) {
-            Alert.alert('', error.message);
+            Alert.alert("", error.message);
           } else {
-            Alert.alert('', error);
+            Alert.alert("", error);
           }
         }, 200);
         return Promise.reject();
@@ -197,21 +197,21 @@ class CustomerInfo extends PureComponent {
   };
 
   getContactDetails = contacts => {
-    const contact = find(contacts, contacts => contacts.primary == 'true');
+    const contact = find(contacts, contacts => contacts.primary == "true");
     if (contact && Object.keys(contact).length > 0) {
       return contact;
     } else {
       return {
-        phone: 'N/A',
-        firstname: '',
-        lastname: '',
-        phone: '',
-        email: '',
-        PartyNumber: '',
-        countrycode: '',
-        primary: '',
-        extension: '',
-        alternatephone: ''
+        phone: "N/A",
+        firstname: "",
+        lastname: "",
+        phone: "",
+        email: "",
+        PartyNumber: "",
+        countrycode: "",
+        primary: "",
+        extension: "",
+        alternatephone: ""
       };
     }
   };
@@ -228,22 +228,22 @@ class CustomerInfo extends PureComponent {
     if (params && params.customer) {
       const contact = find(
         params.customer.contacts,
-        contacts => contacts.primary == 'true'
+        contacts => contacts.primary == "true"
       );
 
       const address = find(
         params.customer.address,
-        address => address.primary == 'true' || address.primary
+        address => address.primary == "true" || address.primary
       );
 
       const acceptanceratio = find(
         params.customer.extension,
-        ext => ext.name == 'acceptanceratio'
+        ext => ext.name == "acceptanceratio"
       );
 
       const clusterpriority = find(
         params.customer.extension,
-        ext => ext.name == 'clusterpriority'
+        ext => ext.name == "clusterpriority"
       );
 
       this.setState({
@@ -252,30 +252,30 @@ class CustomerInfo extends PureComponent {
           primaryaddress: address
             ? address
             : {
-                addressid: '',
-                street: '',
-                city: '',
-                country: '',
-                additional: '',
-                postalcode: '',
-                state: ''
+                addressid: "",
+                street: "",
+                city: "",
+                country: "",
+                additional: "",
+                postalcode: "",
+                state: ""
               },
           primarycontact: contact
             ? contact
             : {
-                contactid: '',
-                firstname: '',
-                lastname: '',
-                countrycode: '',
-                phone: '',
-                alternatephone: '',
-                email: '',
-                primary: ''
+                contactid: "",
+                firstname: "",
+                lastname: "",
+                countrycode: "",
+                phone: "",
+                alternatephone: "",
+                email: "",
+                primary: ""
               },
-          clusterpriority: clusterpriority ? clusterpriority.value : '',
+          clusterpriority: clusterpriority ? clusterpriority.value : "",
           OrganizationDEO_JTI_PromotionAcceptanceRatio_c: acceptanceratio
             ? acceptanceratio.value
-            : ''
+            : ""
         }
       });
     } else {
@@ -284,12 +284,12 @@ class CustomerInfo extends PureComponent {
         customer: {
           ...customer,
           registrationtype:
-            profile.PrimaryCountry_c == 'CA' ? 'Wholesaler' : 'Tobacconist',
+            profile.PrimaryCountry_c == "CA" ? "Wholesaler" : "Tobacconist",
           primaryaddress: {
             ...customer.primaryaddress,
-            country: profile.PrimaryCountry_c == 'CA' ? 'CA' : 'IE'
+            country: profile.PrimaryCountry_c == "CA" ? "CA" : "IE"
           },
-          clusterpriority: profile.PrimaryCountry_c == 'CA' ? 'Low' : ''
+          clusterpriority: profile.PrimaryCountry_c == "CA" ? "Low" : ""
         }
       });
     }
@@ -325,7 +325,7 @@ class CustomerInfo extends PureComponent {
       this.setState({ edit: params.edit });
     }
 
-    this.click.subscribe('validate', validateObject);
+    this.click.subscribe("validate", validateObject);
   }
 
   componentWillReceiveProps(newProps) {
@@ -370,35 +370,35 @@ class CustomerInfo extends PureComponent {
       shopsize
     } = this.state.customer;
     let isValid = true;
-    let errorMessage = '';
+    let errorMessage = "";
     if (!name) {
       isValid = false;
-      errorMessage = errorMessage + '\n' + labels.ORGANISATION_NAME_VALIDATION;
+      errorMessage = errorMessage + "\n" + labels.ORGANISATION_NAME_VALIDATION;
     }
     if (!registrationtype) {
       isValid = false;
-      errorMessage = errorMessage + '\n' + labels.ACCOUNT_TYPE_VALIDATION;
+      errorMessage = errorMessage + "\n" + labels.ACCOUNT_TYPE_VALIDATION;
     }
     if (!additional) {
       isValid = false;
-      errorMessage = errorMessage + '\n' + labels.ADDRESS_LINE1_VALIDATION;
+      errorMessage = errorMessage + "\n" + labels.ADDRESS_LINE1_VALIDATION;
     }
-    if (registrationtype === 'Wholesaler' && !shopsize) {
+    if (registrationtype === "Wholesaler" && !shopsize) {
       isValid = false;
-      errorMessage = errorMessage + '\n' + labels.SHOP_SIZE_MANDATORY;
+      errorMessage = errorMessage + "\n" + labels.SHOP_SIZE_MANDATORY;
     }
     if (!country) {
       isValid = false;
-      errorMessage = errorMessage + '\n' + labels.ADDRESS_COUNTRY_VALIDATION;
+      errorMessage = errorMessage + "\n" + labels.ADDRESS_COUNTRY_VALIDATION;
     }
     if (!firstname) {
       isValid = false;
       errorMessage =
-        errorMessage + '\n' + labels.CONTACT_PERSON_NAME_VALIDATION;
+        errorMessage + "\n" + labels.CONTACT_PERSON_NAME_VALIDATION;
     }
     if (!email) {
       isValid = false;
-      errorMessage = errorMessage + '\n' + labels.EMAIL_VALIDATION;
+      errorMessage = errorMessage + "\n" + labels.EMAIL_VALIDATION;
     }
 
     // if (Country && 'Country' == 'IE' && !OrganizationDEO_JTI_ShopSize_c) {
@@ -416,7 +416,7 @@ class CustomerInfo extends PureComponent {
   };
 
   onFailHandler = error => {
-    console.log('error on rule');
+    console.log("error on rule");
     console.log(error);
     alert(error);
   };
@@ -428,22 +428,22 @@ class CustomerInfo extends PureComponent {
         state: { params }
       }
     } = this.props;
-    let SourceSystem = '';
+    let SourceSystem = "";
     if (params && params.customer) {
       SourceSystem = params.customer.SourceSystem;
     }
 
     let accountData = pick(this.state.customer, [
-      'id',
-      'name',
-      'registrationtype',
-      'comment',
-      'shopsize',
-      'externalid',
-      'pricebookid',
-      'address',
-      'contacts',
-      'extension'
+      "id",
+      "name",
+      "registrationtype",
+      "comment",
+      "shopsize",
+      "externalid",
+      "pricebookid",
+      "address",
+      "contacts",
+      "extension"
     ]);
 
     const {
@@ -490,57 +490,55 @@ class CustomerInfo extends PureComponent {
     if (isEmpty(accountData.extension)) {
       if (clusterpriority) {
         accountData.extension.push({
-          name: 'clusterpriority',
+          name: "clusterpriority",
           value: clusterpriority
         });
       }
       if (OrganizationDEO_JTI_PromotionAcceptanceRatio_c) {
         accountData.extension.push({
-          name: 'acceptanceratio',
+          name: "acceptanceratio",
           value: OrganizationDEO_JTI_PromotionAcceptanceRatio_c
         });
       }
     } else {
       const indexClusterpriority = findIndex(
         accountData.extension,
-        extension => extension.name == 'clusterpriority'
+        extension => extension.name == "clusterpriority"
       );
 
       if (indexClusterpriority != -1) {
         accountData.extension[indexClusterpriority] = {
-          name: 'clusterpriority',
+          name: "clusterpriority",
           value: clusterpriority
         };
       }
 
       const indexAcceptanceratio = findIndex(
         accountData.extension,
-        extension => extension.name == 'acceptanceratio'
+        extension => extension.name == "acceptanceratio"
       );
 
       if (indexAcceptanceratio != -1) {
         accountData.extension[indexAcceptanceratio] = {
-          name: 'acceptanceratio',
+          name: "acceptanceratio",
           value: OrganizationDEO_JTI_PromotionAcceptanceRatio_c
         };
       }
     }
-    const endPoint = `${API_END_POINT.PRICE_BOOK_HEADER}?Name=${
-      profile.__ORACO__DistributionCentre_c
-    }`;
+    const endPoint = `${API_END_POINT.PRICE_BOOK_HEADER}?Name=${profile.__ORACO__DistributionCentre_c}`;
 
     const priceBookResponse = await fetchObjectCollection(API_NAME, endPoint);
     if (priceBookResponse && priceBookResponse.length > 0) {
       accountData = {
         ...accountData,
-        pricebookid: '' + priceBookResponse[0].PricebookId
+        pricebookid: "" + priceBookResponse[0].PricebookId
       };
     }
 
     //  this.onSaveHandler(accountData);
 
-    this.click.fire('validate', {
-      object: 'Customer',
+    this.click.fire("validate", {
+      object: "Customer",
       data: accountData,
       onSuccessHandler: this.onSaveHandler,
       onFailHandler: this.onFailHandler
@@ -552,9 +550,7 @@ class CustomerInfo extends PureComponent {
       async position => {
         try {
           const geocodingResults = await fetch(
-            `${google_maps_geocoding_api_endpoint}?latlng=${
-              position.coords.latitude
-            },${position.coords.longitude}&key=${GOOGLE_MAPS_API_KEY}`
+            `${google_maps_geocoding_api_endpoint}?latlng=${position.coords.latitude},${position.coords.longitude}&key=${GOOGLE_MAPS_API_KEY}`
           );
           const geocodingResultsBody = await geocodingResults.json();
           const geocodingResult =
@@ -564,26 +560,26 @@ class CustomerInfo extends PureComponent {
               ...prevState.customer,
               AddressLine1: `${this.getItemFromGeocodingResults(
                 geocodingResult,
-                'sublocality'
+                "sublocality"
               )} ${this.getItemFromGeocodingResults(
                 geocodingResult,
-                'locality'
+                "locality"
               )}`,
               City: `${this.getItemFromGeocodingResults(
                 geocodingResult,
-                'administrative_area_level_2'
+                "administrative_area_level_2"
               )}`,
               Province: `${this.getItemFromGeocodingResults(
                 geocodingResult,
-                'administrative_area_level_1'
+                "administrative_area_level_1"
               )}`,
               County: `${this.getItemFromGeocodingResults(
                 geocodingResult,
-                'administrative_area_level_1'
+                "administrative_area_level_1"
               )}`,
               PostalCode: `${this.getItemFromGeocodingResults(
                 geocodingResult,
-                'postal_code'
+                "postal_code"
               )}`
             }
           }));
@@ -601,13 +597,13 @@ class CustomerInfo extends PureComponent {
     if (filteredAddress) {
       return filteredAddress.long_name;
     }
-    return '';
+    return "";
   }
 
   handleGeocodingError(error) {
     console.log(error);
     setTimeout(() => {
-      Alert.alert('', labels.error_fetch_device_location);
+      Alert.alert("", labels.error_fetch_device_location);
     }, 200);
   }
 
@@ -619,22 +615,22 @@ class CustomerInfo extends PureComponent {
       PrimaryContactPhone
     } = this.state.customer;
     const contact = {
-      FirstName: '',
-      LastName: '',
-      MiddleName: '',
-      JobTitle: PrimaryJobTitle ? PrimaryJobTitle : '',
-      EmailAddress: PrimaryContactEmail ? PrimaryContactEmail : '',
-      MobileNumber: PrimaryContactPhone ? PrimaryContactPhone : ''
+      FirstName: "",
+      LastName: "",
+      MiddleName: "",
+      JobTitle: PrimaryJobTitle ? PrimaryJobTitle : "",
+      EmailAddress: PrimaryContactEmail ? PrimaryContactEmail : "",
+      MobileNumber: PrimaryContactPhone ? PrimaryContactPhone : ""
     };
 
     if (PrimaryContactName) {
-      const name = split(PrimaryContactName, ' ');
-      contact['FirstName'] = name[0];
+      const name = split(PrimaryContactName, " ");
+      contact["FirstName"] = name[0];
       if (name.length > 2) {
-        contact['MiddleName'] = name[1];
-        contact['LastName'] = name[2];
+        contact["MiddleName"] = name[1];
+        contact["LastName"] = name[2];
       } else if (name.length > 1) {
-        contact['LastName'] = name[1];
+        contact["LastName"] = name[1];
       }
     }
 
@@ -643,22 +639,22 @@ class CustomerInfo extends PureComponent {
 
   createContact = async PartyNumber => {
     const address = pick(this.state.customer, [
-      'Country',
-      'AddressLine1',
-      'AddressLine2',
-      'AddressLine3',
-      'City',
-      'Province',
-      'PostalCode',
-      'County',
-      'OwnerPartyNumber',
-      'SourceSystem',
-      'SourceSystemReferenceValue'
+      "Country",
+      "AddressLine1",
+      "AddressLine2",
+      "AddressLine3",
+      "City",
+      "Province",
+      "PostalCode",
+      "County",
+      "OwnerPartyNumber",
+      "SourceSystem",
+      "SourceSystemReferenceValue"
     ]);
 
     const systemExternalKeys = pick(this.state.customer.contact, [
-      'SourceSystem',
-      'SourceSystemReferenceValue'
+      "SourceSystem",
+      "SourceSystemReferenceValue"
     ]);
 
     const name = this.getContactName();
@@ -670,7 +666,7 @@ class CustomerInfo extends PureComponent {
       }
     } = this.props;
 
-    let SourceSystemReferenceValue = '';
+    let SourceSystemReferenceValue = "";
     if (params && params.customer && params.customer.contact) {
       SourceSystemReferenceValue =
         params.customer.contact.SourceSystemReferenceValue;
@@ -684,7 +680,7 @@ class CustomerInfo extends PureComponent {
       OwnerPartyNumber: profile.PartyNumber
     };
 
-    var diffrentiatorKey = 'PartyNumber';
+    var diffrentiatorKey = "PartyNumber";
 
     if (this.state.customer.PrimaryContactPartyNumber) {
       contact = {
@@ -695,12 +691,12 @@ class CustomerInfo extends PureComponent {
       contact = {
         ...contact
       };
-      diffrentiatorKey = 'SourceSystemReferenceValue';
+      diffrentiatorKey = "SourceSystemReferenceValue";
     } else {
-      diffrentiatorKey = 'SourceSystemReferenceValue';
+      diffrentiatorKey = "SourceSystemReferenceValue";
       contact = {
         ...contact,
-        SourceSystem: '',
+        SourceSystem: "",
         SourceSystemReferenceValue: this.state.uuid
       };
     }
@@ -723,19 +719,19 @@ class CustomerInfo extends PureComponent {
         this.setState({ loading: false }, () => {
           setTimeout(() => {
             Alert.alert(
-              '',
+              "",
               labels.CONTACT_NOT_CREATED,
               [
                 {
-                  text: 'Try Again',
+                  text: "Try Again",
                   onPress: () => {
                     this.createContact(PartyNumber);
                   }
                 },
                 {
-                  text: 'Cancel',
+                  text: "Cancel",
                   onPress: () => this.goBack(),
-                  style: 'cancel'
+                  style: "cancel"
                 }
               ],
               { cancelable: false }
@@ -780,8 +776,8 @@ class CustomerInfo extends PureComponent {
   };
 
   checkNetworkConnectivity = async () => {
-    const isConnected = await AsyncStorage.getItem('networkConnectivity');
-    this.setState({ isConnected: isConnected == 'true' });
+    const isConnected = await AsyncStorage.getItem("networkConnectivity");
+    this.setState({ isConnected: isConnected == "true" });
   };
 
   renderGetLocationIcon = () => {
@@ -826,21 +822,21 @@ class CustomerInfo extends PureComponent {
         ? this.state.Contact[0]
         : {};*/
 
-    let data = ['Wholesaler', 'Tobacconist'];
-    let dataClusterPriority = ['High', 'Medium', 'Low'];
-    let dataCountry = ['CA', 'IE'];
+    let data = ["Wholesaler", "Tobacconist"];
+    let dataClusterPriority = ["High", "Medium", "Low"];
+    let dataCountry = ["CA", "IE"];
 
     const {
       auth: { profile }
     } = this.props;
     const isDistributionCentreCanada =
-      profile && profile.PrimaryCountry_c == 'CA' ? true : false;
+      profile && profile.PrimaryCountry_c == "CA" ? true : false;
 
     return (
       <View
         style={{
           flex: 1,
-          backgroundColor: '#fff'
+          backgroundColor: "#fff"
         }}
       >
         {this.state.loading ? <Loader /> : null}
@@ -870,7 +866,7 @@ class CustomerInfo extends PureComponent {
                 <View
                   style={{
                     flex: 1,
-                    justifyContent: 'center',
+                    justifyContent: "center",
                     paddingTop: 5,
                     paddingBottom: 5
                   }}
@@ -887,7 +883,7 @@ class CustomerInfo extends PureComponent {
                 <View
                   style={{
                     flex: 1,
-                    justifyContent: 'center',
+                    justifyContent: "center",
                     paddingTop: 5,
                     paddingBottom: 5
                   }}
@@ -909,7 +905,7 @@ class CustomerInfo extends PureComponent {
                   {labels.CUSTOMER_ACCOUNT_NAME}*
                 </Text>
                 <TextInput
-                  onChangeText={text => this.onValueChange('name', text)}
+                  onChangeText={text => this.onValueChange("name", text)}
                   underlineColorAndroid="transparent"
                   value={name}
                   style={styles.textValue}
@@ -926,7 +922,7 @@ class CustomerInfo extends PureComponent {
                       defaultValue={data[data.indexOf(registrationtype)]}
                       textStyle={styles.dropdownText}
                       style={styles.dropdownView}
-                      dropdownStyle={{ flex: 1, width: '40%' }}
+                      dropdownStyle={{ flex: 1, width: "40%" }}
                       dropdownTextStyle={styles.dropdownText}
                       options={data}
                       onSelect={(index, value) => {
@@ -958,7 +954,7 @@ class CustomerInfo extends PureComponent {
                   style={styles.textValue}
                   editable={edit}
                   selectTextOnFocus={edit}
-                  onChangeText={text => this.onValueChange('shopsize', text)}
+                  onChangeText={text => this.onValueChange("shopsize", text)}
                   name="shopsize"
                   value={shopsize}
                 />
@@ -982,7 +978,7 @@ class CustomerInfo extends PureComponent {
                         }
                         style={styles.dropdownView}
                         textStyle={styles.dropdownText}
-                        dropdownStyle={{ flex: 1, width: '40%' }}
+                        dropdownStyle={{ flex: 1, width: "40%" }}
                         dropdownTextStyle={styles.dropdownText}
                         options={dataClusterPriority}
                         onSelect={(index, value) => {
@@ -1020,7 +1016,7 @@ class CustomerInfo extends PureComponent {
                     selectTextOnFocus={edit}
                     onChangeText={text =>
                       this.onValueChange(
-                        'OrganizationDEO_JTI_PromotionAcceptanceRatio_c',
+                        "OrganizationDEO_JTI_PromotionAcceptanceRatio_c",
                         text
                       )
                     }
@@ -1032,7 +1028,7 @@ class CustomerInfo extends PureComponent {
             </View>
             <View style={styles.textRow}>
               <View style={styles.textColumn1}>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: "row" }}>
                   <View style={{ flex: 0.6, marginRight: 5 }}>
                     <Text style={styles.textLabel}>{labels.OUTLET_TYPE}</Text>
                     <TextInput
@@ -1086,7 +1082,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primaryaddress', {
+                    this.onValueChange("primaryaddress", {
                       ...this.state.customer.primaryaddress,
                       additional: text
                     })
@@ -1105,7 +1101,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primaryaddress', {
+                    this.onValueChange("primaryaddress", {
                       ...this.state.customer.primaryaddress,
                       street: text
                     })
@@ -1138,7 +1134,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primaryaddress', {
+                    this.onValueChange("primaryaddress", {
                       ...this.state.customer.primaryaddress,
                       city: text
                     })
@@ -1158,11 +1154,11 @@ class CustomerInfo extends PureComponent {
                   underlineColorAndroid="transparent"
                   style={styles.textValue}
                   editable={edit}
-                  name={'state'}
+                  name={"state"}
                   selectTextOnFocus={edit}
                   value={state}
                   onChangeText={text =>
-                    this.onValueChange('primaryaddress', {
+                    this.onValueChange("primaryaddress", {
                       ...this.state.customer.primaryaddress,
                       state: text
                     })
@@ -1181,7 +1177,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primaryaddress', {
+                    this.onValueChange("primaryaddress", {
                       ...this.state.customer.primaryaddress,
                       postalcode: text
                     })
@@ -1199,7 +1195,7 @@ class CustomerInfo extends PureComponent {
                       defaultValue={dataCountry[dataCountry.indexOf(country)]}
                       style={styles.dropdownView}
                       textStyle={styles.dropdownText}
-                      dropdownStyle={{ flex: 1, width: '40%' }}
+                      dropdownStyle={{ flex: 1, width: "40%" }}
                       dropdownTextStyle={styles.dropdownText}
                       options={dataCountry}
                       onSelect={(index, value) => {
@@ -1315,7 +1311,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primarycontact', {
+                    this.onValueChange("primarycontact", {
                       ...this.state.customer.primarycontact,
                       firstname: text
                     })
@@ -1333,7 +1329,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primarycontact', {
+                    this.onValueChange("primarycontact", {
                       ...this.state.customer.primarycontact,
                       lastname: text
                     })
@@ -1354,7 +1350,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primarycontact', {
+                    this.onValueChange("primarycontact", {
                       ...this.state.customer.primarycontact,
                       email: text
                     })
@@ -1371,7 +1367,7 @@ class CustomerInfo extends PureComponent {
                   editable={edit}
                   selectTextOnFocus={edit}
                   onChangeText={text =>
-                    this.onValueChange('primarycontact', {
+                    this.onValueChange("primarycontact", {
                       ...this.state.customer.primarycontact,
                       phone: text
                     })
@@ -1396,7 +1392,7 @@ class CustomerInfo extends PureComponent {
                 multiline={true}
                 numberOfLines={4}
                 maxLength={40}
-                onChangeText={text => this.onValueChange('comment', text)}
+                onChangeText={text => this.onValueChange("comment", text)}
                 name="comment"
                 value={comment}
               />
@@ -1432,19 +1428,19 @@ export default CustomerInfo;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: "column",
     backgroundColor: APP_THEME.APP_BASE_COLOR_WHITE,
     marginBottom: 20
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 20,
     height: 50,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   headerWithSmallButton: {
-    justifyContent: 'flex-start'
+    justifyContent: "flex-start"
   },
   headerText: {
     flex: 1,
@@ -1452,56 +1448,56 @@ const styles = StyleSheet.create({
     fontFamily: APP_FONTS.FONT_BOLD,
     fontSize: 18,
     lineHeight: 22,
-    fontWeight: '600',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center'
+    fontWeight: "600",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center"
   },
   headerButton: {
     flex: 1,
     height: 40,
     borderRadius: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: APP_THEME.APP_BASE_COLOR,
-    flexDirection: 'row'
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: APP_THEME.APP_BUTTON_COLOR,
+    flexDirection: "row"
   },
   headerButtonText: {
     fontFamily: APP_FONTS.FONT_REGULAR,
     fontSize: 16,
     lineHeight: 19,
-    fontWeight: '600',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontWeight: "600",
+    alignItems: "center",
+    justifyContent: "center",
     color: APP_THEME.APP_BASE_COLOR_WHITE
   },
   headerButtonIcon: {
     fontFamily: APP_FONTS.FONT_MATERIAL_DESIGN,
     fontSize: 16,
     lineHeight: 19,
-    fontWeight: '600',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontWeight: "600",
+    alignItems: "center",
+    justifyContent: "center",
     color: APP_THEME.APP_BASE_COLOR_WHITE
   },
 
   textRow: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 10
   },
   textColumn1: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
+    flexDirection: "column",
+    justifyContent: "center",
 
     marginRight: 5
   },
   textColumn2: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
+    flexDirection: "column",
+    justifyContent: "center",
 
     marginLeft: 5
   },
@@ -1527,14 +1523,14 @@ const styles = StyleSheet.create({
   },
   dropdownParentView: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: "row",
     paddingLeft: 10,
     paddingRight: 10,
     borderWidth: 1,
     borderColor: APP_THEME.APP_LIST_BORDER_COLOR,
     borderRadius: 2,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center"
   },
   dropdownView: {
     flex: 8
@@ -1564,24 +1560,24 @@ const styles = StyleSheet.create({
     color: APP_THEME.APP_LIST_FONT_COLOR,
     fontFamily: APP_FONTS.FONT_MATERIAL_DESIGN,
     fontSize: 32,
-    textAlign: 'center'
+    textAlign: "center"
   },
   geocodeAddressButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     borderRadius: 20,
     borderWidth: 1,
     borderColor: APP_THEME.APP_BASE_COLOR,
     width: 20,
     height: 20,
-    transform: [{ rotate: '45deg' }],
+    transform: [{ rotate: "45deg" }],
     marginStart: 5
   },
   geocodeAddressButtonIcon: {
     color: APP_THEME.APP_BASE_COLOR,
     fontFamily: APP_FONTS.FONT_MATERIAL_DESIGN,
     fontSize: 13,
-    alignItems: 'center',
+    alignItems: "center",
     paddingLeft: 1
   }
 });
