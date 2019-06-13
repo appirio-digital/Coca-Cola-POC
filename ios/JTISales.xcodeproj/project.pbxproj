@@ -2373,7 +2373,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appirio.cocacola;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appirio.accelintertainment;
 				PRODUCT_NAME = JTISales;
 				PROVISIONING_PROFILE_SPECIFIER = "JDC General Development";
 				SWIFT_OBJC_BRIDGING_HEADER = "JTISales-Bridging-Header.h";
@@ -2421,7 +2421,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appirio.cocacola;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appirio.accelintertainment;
 				PRODUCT_NAME = JTISales;
 				PROVISIONING_PROFILE_SPECIFIER = "XC Ad Hoc: *";
 				SWIFT_OBJC_BRIDGING_HEADER = "JTISales-Bridging-Header.h";
