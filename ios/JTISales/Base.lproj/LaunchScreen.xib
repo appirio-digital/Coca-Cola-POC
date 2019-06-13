@@ -16,11 +16,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LGe-kd-op4">
-                    <rect key="frame" x="307.5" y="519" width="219" height="74"/>
+                    <rect key="frame" x="112" y="488.5" width="610" height="135"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.95686274509803915" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="LGe-kd-op4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FdL-t0-nOW"/>
                 <constraint firstItem="LGe-kd-op4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="W4o-yR-CUq"/>
@@ -31,6 +31,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="219" height="74.5"/>
+        <image name="logo" width="610" height="135"/>
     </resources>
 </document>
