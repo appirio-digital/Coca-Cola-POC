@@ -177,6 +177,7 @@ export const labels = new LocalizedStrings({
     CANCEL: 'Cancel',
     PREVIOUS_ORDERS: 'PREVIOUS ORDERS',
     NEW_ORDER: 'NEW ORDER',
+    SLOT_MACHINE: 'SLOT MACHINE',
     PROMOTIONS: 'Promotions',
     TAXATION: 'Taxation',
     INVOICE: 'Invoice',
@@ -367,6 +368,7 @@ export const labels = new LocalizedStrings({
     OUTLET_TYPE: 'Type de sortie',
     NEW_CUSTOMER: 'Nouveau client',
     NEW_ORDER: 'Nouvel ordre',
+    SLOT_MACHINE: 'SLOT MACHINE',
     APPLY: 'Appliquer',
     CLEAR: 'Clair',
     error_fetch_device_location:

@@ -74,6 +74,7 @@ export const APP_ROUTE = {
   PROMOTIONS: "Promotions",
   NEW_ORDER: "Neworder",
   VIEW_PDF: "ViewPDF",
+  SLOT_MACHINE:'SlotMachine',
   CUSTOMERS_ALL: "CustomerAll"
 };
 

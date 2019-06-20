@@ -9,7 +9,12 @@ import {
 } from 'react-native';
 import isEmpty from 'lodash/isEmpty';
 import findKey from 'lodash/findKey';
-import { APP_FONTS, APP_THEME, ACTIVITY_STATUS_LOV } from '../../../constants';
+import {
+  APP_FONTS,
+  APP_THEME,
+  ACTIVITY_STATUS_LOV,
+  APP_ROUTE
+} from '../../../constants';
 import RouteListRow from './RouteListRow';
 import { labels } from '../../../stringConstants';
 import DataFilter from '../../../components/DateFilter';
@@ -61,123 +66,8 @@ class Route extends Component {
   };
 
   activityItemClickHandler = async activity => {
-    
-
-  alert('Checkin success!')
-
-    const {
-      id,
-      activitynumber,
-      statuscode,
-      checkinlatitude,
-      checkinlongitude
-    } = activity;
-    if (statuscode == ACTIVITY_STATUS_LOV.COMPLETE) {
-      return;
-    }
-    this.setState({
-      loading: true
-    });
-
-    const { latitude, longitude } = this.state.coordinate;
-    const isCheckIn =
-      !isEmpty(statuscode) && statuscode !== ACTIVITY_STATUS_LOV.IN_PROGRESS
-        ? true
-        : isEmpty(statuscode)
-        ? true
-        : false;
-    const trimmedLatitude = `${
-      isNaN(Math.round(latitude * 100) / 100)
-        ? 0
-        : Math.round(latitude * 100) / 100
-    }`;
-    const trimmedLongitude = `${
-      isNaN(Math.round(longitude * 100) / 100)
-        ? 0
-        : Math.round(longitude * 100) / 100
-    }`;
-
-    var checkInLatitude = '';
-    var checkInLongitude = '';
-    if (checkinlatitude) {
-      checkInLatitude = `${
-        isNaN(Math.round(checkinlatitude * 100) / 100)
-          ? 0
-          : Math.round(checkinlatitude * 100) / 100
-      }`;
-    }
-    if (checkinlongitude) {
-      checkInLongitude = `${
-        isNaN(Math.round(checkinlongitude * 100) / 100)
-          ? 0
-          : Math.round(checkinlongitude * 100) / 100
-      }`;
-    }
-
-    try {
-      const request = isCheckIn
-        ? {
-            id: id,
-            activitynumber: activitynumber,
-            checkinlongitude: trimmedLongitude,
-            checkinlatitude: trimmedLatitude,
-            checkintime: getCurrentTimeInGMT(),
-            statuscode: ACTIVITY_STATUS_LOV.IN_PROGRESS
-          }
-        : {
-            id: id,
-            activitynumber: activitynumber,
-            checkouttime: getCurrentTimeInGMT(),
-            checkoutlongitude: trimmedLongitude,
-            checkoutlatitude: trimmedLatitude,
-            checkinlongitude: checkInLongitude,
-            checkinlatitude: checkInLatitude,
-            statuscode: ACTIVITY_STATUS_LOV.COMPLETE
-          };
-
-      this.setState({ loading: true });
-      const response = await createNewObject(
-        request,
-        JTI_API,
-        API_END_POINT.ACTIVITY,
-        'activitynumber',
-        SyncPinPriority.Normal
-      );
-      const selectedId = '';
-      if (
-        response.success &&
-        !isEmpty(response.object) &&
-        response.object.statuscode == ACTIVITY_STATUS_LOV.IN_PROGRESS
-      ) {
-        selectedId = id;
-      }
-      const {
-        locationsActions: { resetMap }
-      } = this.props;
-      resetMap();
-      this.setFilterDate({
-        from: this.state.fromDate,
-        to: this.state.toDate
-      });
-      const completedActivity = this.state.activityList.filter(
-        activity => activity.statuscode == ACTIVITY_STATUS_LOV.COMPLETE
-      );
-      const inProgressActivity = this.state.activityList.filter(
-        activity => activity.statuscode == ACTIVITY_STATUS_LOV.IN_PROGRESS
-      );
-      this.setState({
-        loading: false,
-        renderedMap: false,
-        checkInId: selectedId,
-        isCheckoutForDay:
-          !isEmpty(completedActivity) &&
-          completedActivity.length === this.state.activityList.length,
-        noVisitInprogress: isEmpty(inProgressActivity),
-        refresh: true
-      });
-    } catch (error) {
-      this.setState({ loading: false });
-    }
+    const { navigation } = this.props;
+    navigation.navigate(APP_ROUTE.SLOT_MACHINE);
   };
 
   checkNetworkConnectivity = async () => {

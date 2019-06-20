@@ -38,6 +38,7 @@ import deviceCurrentLocationListener from './src/hoc/deviceCurrentLocationListen
 import withInAppNotification from './src/hoc/withInAppNotification';
 import { NavigationActions, StackActions } from 'react-navigation';
 import ViewPDF from './src/screens/neworder/Invoice/viewPDF';
+import SlotMachine from './src/screens/customers/route/SlotsMachine';
 import { compose } from 'recompose';
 
 import { APP_FONTS, APP_THEME, APP_ROUTE } from './src/constants';
@@ -180,6 +181,7 @@ const AppDrawer = createDrawerNavigator(
       CustomerPayment: getRouteScreen(CustomerPyment),
       Neworder: getRouteScreen(Neworder, labels.NEW_ORDER),
       ViewPDF: getRouteScreen(ViewPDF),
+      SlotMachine: getRouteScreen(SlotMachine, labels.SLOT_MACHINE),
       CustomerAll: getRouteScreen(Customer, labels.CUSTOMERS)
     })
   },
