@@ -1,0 +1,30 @@
+[
+  {
+    "ProductName": "SLOT_MACHINE-001",
+    "ProductNumber": "1001",
+    "CurrentTally": "$10,000.00",
+    "TallyUpdateDate": "08/15/2018",
+    "PreviousTally": "$8000.00"
+  },
+  {
+    "ProductName": "SLOT_MACHINE-002",
+    "ProductNumber": "1002",
+    "CurrentTally": "$12,000.00",
+    "TallyUpdateDate": "08/16/2018",
+    "PreviousTally": "$10000.00"
+  },
+  {
+    "ProductName": "SLOT_MACHINE-003",
+    "ProductNumber": "1003",
+    "CurrentTally": "$14,000.00",
+    "TallyUpdateDate": "08/17/2018",
+    "PreviousTally": "$12000.00"
+  },
+  {
+    "ProductName": "SLOT_MACHINE-004",
+    "ProductNumber": "1004",
+    "CurrentTally": "$16,000.00",
+    "TallyUpdateDate": "08/18/2018",
+    "PreviousTally": "$14000.00"
+  }
+]
