@@ -6,7 +6,9 @@ import {
   GET_PRODUCTS_CATEGORY_MAPPING,
   PRICE_BOOK_ITEMS,
   GET_ALL_PRODUCTS_WITH_PRICE,
-  SET_PRICE_BOOK_HEADER
+  SET_PRICE_BOOK_HEADER,
+  GET_SLOT_MACHINE_LIST,
+  SET_SLOT_MACHINE_BALANCE
 } from './types';
 
 import {
@@ -19,6 +21,15 @@ import {
 } from '../../../services/omcClient';
 
 import { find, findIndex, isEmpty } from 'lodash';
+import slotMachine from './slotMachine.json';
+
+export const getSlotMachinelists = () => {
+  return slotMachine;
+};
+
+export const setSlotMachinelists = () => {
+  return slotMachine;
+};
 
 export const getPriceBookItems = country => async dispatch => {
   try {

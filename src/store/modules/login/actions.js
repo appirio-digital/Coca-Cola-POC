@@ -21,7 +21,7 @@ export const authenticateOAuthMCSUser = (email, password) => dispatch => {
   dispatch({
     type: LOGIN_USER
   });
-  if (email === 'Coke.User' && password === 'Wipro@1234') {
+  if (email === 'Accel.User' && password === 'Wipro@1234') {
     loginUserSuccess(dispatch, sampleLoginJSON);
   } else {
     loginUserFailed(dispatch);

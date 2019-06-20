@@ -6,7 +6,9 @@ import {
   PRODUCT_LOADING,
   PRICE_BOOK_ITEMS,
   GET_ALL_PRODUCTS_WITH_PRICE,
-  SET_PRICE_BOOK_HEADER
+  SET_PRICE_BOOK_HEADER,
+  GET_SLOT_MACHINE_LIST,
+  SET_SLOT_MACHINE_BALANCE
 } from './types';
 import { CLEAR_STATE } from '../index';
 
@@ -34,6 +36,11 @@ export default (state = [], action) => {
       return {
         ...state,
         priceBookHeader: action.payload
+      };
+    case GET_SLOT_MACHINE_LIST:
+      return {
+        ...state,
+        slotsmschinelist: action.payload
       };
     case CLEAR_STATE:
       state = [];

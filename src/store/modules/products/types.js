@@ -6,3 +6,5 @@ export const PRODUCT_LOADING = 'product_loading';
 export const PRICE_BOOK_ITEMS = 'price_book_item';
 export const GET_ALL_PRODUCTS_WITH_PRICE = 'product_with_price';
 export const SET_PRICE_BOOK_HEADER = 'set_price_book_header';
+export const GET_SLOT_MACHINE_LIST = 'get_slot_machine_list';
+export const SET_SLOT_MACHINE_BALANCE = 'Set_slot_machine_balance';

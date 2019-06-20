@@ -306,7 +306,11 @@ export const labels = new LocalizedStrings({
     UPLOAD_IMAGE: 'Upload Image',
     MAP_NOT_AVAILABLE: 'Map is not available in offline mode.',
     ERASED_DATABASE_TITLE: 'Erase Database',
-    TEMPLATE_SELECTION_ERROR: 'No template selected, Please select a template.'
+    TEMPLATE_SELECTION_ERROR: 'No template selected, Please select a template.',
+    //SlotMachine
+    BALANCE: 'Balance',
+    PREVIOUS_AMOUNT: 'Previous Tally',
+    CURRENT_AMOUNT: 'Current Tally'
   },
   'fr-CA': {
     ENABLE_TOUCH_ID: 'Activer Touch Id pour la connexion.',
@@ -631,6 +635,10 @@ export const labels = new LocalizedStrings({
     MAP_NOT_AVAILABLE: "La carte n'est pas disponible en mode hors connexion.",
     ERASED_DATABASE_TITLE: 'Effacer Base de données',
     TEMPLATE_SELECTION_ERROR:
-      'Aucun modèle sélectionné, veuillez sélectionner un modèle.'
+      'Aucun modèle sélectionné, veuillez sélectionner un modèle.',
+    //SlotMachine
+    BALANCE: 'Balance',
+    PREVIOUS_AMOUNT: 'Previous Tally',
+    CURRENT_AMOUNT: 'Current Tally'
   }
 });

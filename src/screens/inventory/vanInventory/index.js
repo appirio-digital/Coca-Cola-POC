@@ -574,7 +574,6 @@ export default class VanInventoryList extends Component {
               onPress={this.validateStock}
               disable={disableValidateButton}
             >
-              {' '}
               {labels.VALIDATESTOCK}{' '}
             </Button>
           </View>

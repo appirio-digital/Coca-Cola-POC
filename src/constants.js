@@ -75,7 +75,9 @@ export const APP_ROUTE = {
   NEW_ORDER: "Neworder",
   VIEW_PDF: "ViewPDF",
   SLOT_MACHINE:'SlotMachine',
+  SLOT_BALANCE:'SlotBalance',
   CUSTOMERS_ALL: "CustomerAll"
+
 };
 
 export const SIDEBAR_ROUTE = {
